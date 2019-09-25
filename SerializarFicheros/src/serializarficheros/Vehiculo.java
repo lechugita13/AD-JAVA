@@ -5,6 +5,7 @@
  */
 package serializarficheros;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 /**
@@ -27,44 +28,18 @@ public class Vehiculo implements Serializable{
         this.color = color;
     }
 
-    public String getMarca() {
-        return marca;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Marca del cotxe: ").append(marca+"\n")
+                .append("Modelo del cotxe: ").append(modeloCoche+"\n")
+                .append("Matricula del cotxe: ").append(matricula+"\n")
+                .append("Els caballs: ").append(potencia+"\n")
+                .append("El color del cotxe: ").append(color+"\n");
+        
+        return sb.toString();
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
 
-    public String getModeloCoche() {
-        return modeloCoche;
-    }
-
-    public void setModeloCoche(String modeloCoche) {
-        this.modeloCoche = modeloCoche;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public int getPotencia() {
-        return potencia;
-    }
-
-    public void setPotencia(int potencia) {
-        this.potencia = potencia;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
     
 }

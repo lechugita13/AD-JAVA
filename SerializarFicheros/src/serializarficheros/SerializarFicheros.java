@@ -6,6 +6,7 @@
 package serializarficheros;
 
 import java.io.DataInputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -38,34 +39,56 @@ public class SerializarFicheros {
         String color = "";
         do {
 
-            menu();
-            Scanner e = new Scanner(System.in);
-            int opc = e.nextInt();
-            switch (opc) {
-                case 1:
-                    System.out.println("Introduce la marca del coche: ");
-                    marca = e.next();
-                    System.out.println("Introduce el modelo del coche: ");
-                    modeloCoche = e.next();
-                    System.out.println("Introduce la matricula: ");
-                    matricula = e.next();
-                    System.out.println("Introduce la potencia: ");
-                    potencia = e.nextInt();
-                    System.out.println("Introduce el color: ");
-                    color = e.next();
-                    Vehiculo v1 = new Vehiculo(marca, modeloCoche, matricula, potencia, color);
-                    insertarVehiculo(listaVechiculo, v1);
-                    break;
-                case 2:
-                    visualizarVehiculo(listaVechiculo);
-                    break;
-                case 3:
-                    //visualizarVehiculo(listaVechiculo);
-                    bandera = false;
-                    break;
-                default:
-                    throw new AssertionError();
+            ObjectOutputStream oos = null;
+            try {
+                menu();
+                Scanner e = new Scanner(System.in);
+                int opc = e.nextInt();
+                switch (opc) {
+                    case 1:
+                        System.out.println("Introduce la marca del coche: ");
+                        marca = e.next();
+                        System.out.println("Introduce el modelo del coche: ");
+                        modeloCoche = e.next();
+                        System.out.println("Introduce la matricula: ");
+                        matricula = e.next();
+                        System.out.println("Introduce la potencia: ");
+                        potencia = e.nextInt();
+                        System.out.println("Introduce el color: ");
+                        color = e.next();
+                        Vehiculo v1 = new Vehiculo(marca, modeloCoche, matricula, potencia, color);
+                        insertarVehiculo(listaVechiculo, v1);
+                        break;
+                    case 2:
+                        visualizarVehiculo(listaVechiculo);
+                        break;
+                    case 3:
+                        File fichero = new File("vehiculo.bin");
+                        
+                        
+                        for (int i = 0; i < listaVechiculo.size(); i++) {
+                            Object get = listaVechiculo.get(i);
+                            if (fichero.length()==0) {
+                                oos = new ObjectOutputStream(new FileOutputStream(fichero));
+                                oos.writeObject(get);
+                            }else{
+                                oos= new Append(new FileOutputStream(fichero,true));
+                                oos.writeObject(get);
+                            }
+                          
+                        }
+                        oos.close();
+                        bandera = false;
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
             }
+                
         } while (bandera);
 
     }
@@ -85,8 +108,7 @@ public class SerializarFicheros {
     public static void visualizarVehiculo(ArrayList listaVechiculo) {
         ObjectInputStream ois = null;
         try {
-            File fichero = new File("vehiculo.bin");
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fichero,true));
+           File fichero = new File("vehiculo.bin");
             ois = new ObjectInputStream(new FileInputStream(fichero));
             Object aux = ois.readObject();
             if (!fichero.exists()) {
@@ -96,14 +118,11 @@ public class SerializarFicheros {
                     Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
                 }
             } else {
-                for (int i = 0; i < listaVechiculo.size(); i++) {
-                    Object get = listaVechiculo.get(i);
-                    oos.writeObject(get);
-                }
+                
 
                 while (aux != null) {
                     if (aux instanceof Vehiculo) {
-                        System.out.println(aux);  // Se escribe en pantalla el objeto
+                        System.out.println(aux.toString());  // Se escribe en pantalla el objeto
                     }
                     aux = ois.readObject();
                     
@@ -112,17 +131,12 @@ public class SerializarFicheros {
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
+        } catch (EOFException ex){
+            
+        }catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                ois.close();
-            } catch (IOException ex) {
-                Logger.getLogger(SerializarFicheros.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        } 
         }
 
     }
-}
+
