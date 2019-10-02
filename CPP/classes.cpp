@@ -3,9 +3,19 @@ using namespace std;
 
 class  Cuenta {
 public:
+
     string titular;
     string numCuenta;
     float saldo;
+    void ingresar(float cantidad){
+        saldo +=cantidad;
+    }
+    bool reintegrar(float cantidad){
+        if(saldo < cantidad || cantidad < 0)return false;
+        saldo = saldo -cantidad;
+        return true;
+    }
+
 private:
     float interes;
 };
@@ -45,9 +55,9 @@ cout << "bienvenido al banco" <<endl;
     c->numCuenta ="001";
     c->saldo = 1000 ;
     mostrar(c);
-    ingresar(c,2000);
+    c.ingresar(5000);                                    //ingresar(c,2000);
     mostrar(c);
-    reintegrar(c,100);
+    c.reintegrar(500);                //reintegrar(c,100);
     mostrar(c);
 
   
