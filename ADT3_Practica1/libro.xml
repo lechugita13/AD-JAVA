@@ -55,6 +55,12 @@
 <anyo>2020</anyo>
 <editorial>Bromera</editorial>
 </libro>
+<libro isbn="666-666-666">
+<titulo>Stormlight Archive</titulo>
+<autor>Brandon Sanderson</autor>
+<anyo>2020</anyo>
+<editorial>Bromera</editorial>
+</libro>
 </prestamo>
     <venta>
         <libro isbn="84­675­069­X">
