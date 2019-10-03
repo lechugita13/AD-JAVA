@@ -1,0 +1,12 @@
+select a.name,a.id,partner_ref,date_order from purchase_order AS p,res_partner AS a where a.id = p.partner_id AND p.state='purchase';
+
+
+select r.name,r.id from res_partner as r where r.is_company='true' AND r.id not in (select partner_id from sale_order ) ;
+
+
+select p.name from product_template as p where product_id not in (select origin from account_invoice);
+
+select parter_id from purchase_order where invoice_count=0;
+
+select r.name,r.id from res_partner as r where r.is_company='true' AND r.phone='';
+

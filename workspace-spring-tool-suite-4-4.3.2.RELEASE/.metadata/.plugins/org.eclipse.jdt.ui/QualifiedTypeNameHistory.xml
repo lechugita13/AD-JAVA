@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="multiplicallista.multiplicallista.Multiplicacio"/>
+    <fullyQualifiedTypeName name="multiplicallista.multiplicallista"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ThreadPoolExecutor"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executor"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.internal.objects.annotations.Constructor"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="ordreexecucio.OrdreExecucio.Ordre"/>
+</qualifiedTypeNameHistroy>
