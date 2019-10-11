@@ -29,14 +29,9 @@ int main(int argc, const char* argv[]) {
 Complejo c(2,4);
 Complejo a(-2,4);
 Complejo b(3,5);
-a= b + c;
-a +=b;
-a << b;
-a[1];
-if(a==b)
-if(a == 0)
+Complejo c;
+//c = a + b;
 
-a= -b;
 
 std::cout << "c.mostrar()" << std::endl;
 }
