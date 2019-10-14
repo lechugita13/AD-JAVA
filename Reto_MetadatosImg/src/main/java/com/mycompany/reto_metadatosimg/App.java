@@ -43,8 +43,8 @@ public class App {
 
             ExifSubIFDDirectory directory2 = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory.class);
             //Tinc un error en la data que no me deixa avançar en el proyecte
-            //Date date = directory2.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL);
-            //System.out.println(date);
+            Date date = directory2.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL);
+            System.out.println(date);
             for (Directory directory : metadata.getDirectories()) {
                 for (Tag tag : directory.getTags()) {
                     System.out.format("[%s] - %s = %s",
