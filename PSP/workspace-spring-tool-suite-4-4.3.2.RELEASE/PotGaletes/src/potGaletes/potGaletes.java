@@ -72,6 +72,27 @@ public class potGaletes {
 	//proces que executa per a la mare
 	static class Mare extends Thread{
 		
+		@Override
+		public void run() {
+			while (true){
+				try {
+					// espera que algun xiquet avise
+					NO_HI_HA_GALETES.acquire();
+					//ha de plenar el pot
+					MUTEX.acquire();
+					galetes=10;
+					MUTEX.release();
+					System.out.println("Galletes PA EVERY BODY");
+					
+					HI_HA_GALETES.release();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+				
+			}
+		}
 	}
 	public static void main(String[] args) {
 	
