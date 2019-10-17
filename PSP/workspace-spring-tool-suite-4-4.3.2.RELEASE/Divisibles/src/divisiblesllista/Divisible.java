@@ -9,8 +9,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import jdk.nashorn.internal.codegen.CompilerConstants.Call;
-
 public class Divisible {
 
 	// Objecte que ha de realitzar la tasca
@@ -80,7 +78,7 @@ public class Divisible {
 			// creem objecte amb 2 valors aleatoris
 			Divisio m = new Divisio(i);
 			// Afegim a la llista
-			listaTasques3.add(m);
+			//listaTasques3.add(m);
 
 		}
 

@@ -8,9 +8,7 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Future"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.ThreadPoolExecutor"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Executor"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="jdk.nashorn.internal.objects.annotations.Constructor"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
@@ -19,4 +17,10 @@
     <fullyQualifiedTypeName name="jdk.vm.ci.code.site.Call"/>
     <fullyQualifiedTypeName name="jdk.nashorn.internal.codegen.CompilerConstants.Call"/>
     <fullyQualifiedTypeName name="divisiblesllista.Divisible.Divisio"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ThreadPoolExecutor"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
 </qualifiedTypeNameHistroy>

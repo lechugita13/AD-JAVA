@@ -1462,3 +1462,986 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 17:56:57.745
 !MESSAGE executing callback sts4.classpath.qOCzXQmi SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:27:59.590
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qOCzXQmi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:27:59.590
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qOCzXQmi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:27:59.590
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:27:59.591
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qOCzXQmi => OK
+
+!ENTRY org.eclipse.ui 2 2 2019-10-10 18:27:59.983
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2019-10-10 18:29:02.303 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-10 18:29:07.963
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-10-10 18:29:09.118
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-10-10 18:29:09.118
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10ae002e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@573f2e67,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:13.459
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:13.471
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7abc838a[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:13.472
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:13.590
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.322
+!MESSAGE Boot LS startup time from start to initialized: 2809ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.375
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.QysrImJJisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.376
+!MESSAGE subscribing to classpath changes: sts4.classpath.QysrImJJ isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.377
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.379
+!MESSAGE subsribers = {sts4.classpath.QysrImJJ=Send Classpath Notifications(62)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.380
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.387
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.387
+!MESSAGE Preparing classpath changed notification Divisibles
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.387
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.388
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.388
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.388
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.389
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.389
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.390
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.390
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.QysrImJJ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.391
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.392
+!MESSAGE buffering callback sts4.classpath.QysrImJJ Divisibles false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.392
+!MESSAGE Preparing classpath changed notification MultiplicaLlista
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.393
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.393
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.393
+!MESSAGE buffering callback sts4.classpath.QysrImJJ MultiplicaLlista false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.394
+!MESSAGE Preparing classpath changed notification OrdreExecucio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.394
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.395
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.395
+!MESSAGE buffering callback sts4.classpath.QysrImJJ OrdreExecucio false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.395
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.395
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.396
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.396
+!MESSAGE buffering callback sts4.classpath.QysrImJJ TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.396
+!MESSAGE executing callback sts4.classpath.QysrImJJ 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:16.424
+!MESSAGE executing callback sts4.classpath.QysrImJJ SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.851
+!MESSAGE Preparing classpath changed notification IMDB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.852
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.852
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.852
+!MESSAGE buffering callback sts4.classpath.QysrImJJ IMDB false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.852
+!MESSAGE executing callback sts4.classpath.QysrImJJ 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:29:49.856
+!MESSAGE executing callback sts4.classpath.QysrImJJ SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-10-10 18:30:32.568
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.jdt.core 4 4 2019-10-10 18:31:36.417
+!MESSAGE Exception occurred during problem detection:
+----------------------------------- SOURCE BEGIN -------------------------------------
+class IMDB
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2019-10-10 18:31:36.418
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 1
+Java Model Exception: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:324)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+Caused by: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	... 16 more
+Caused by: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-10-10 18:31:36.419
+!MESSAGE class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-10-10 18:31:36.419
+!MESSAGE class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2019-10-10 18:31:36.420
+!MESSAGE Error in JDT Core during reconcile
+!STACK 1
+Java Model Exception: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:324)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+Caused by: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	... 16 more
+Caused by: java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1005 2019-10-10 18:31:36.421
+!MESSAGE class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.jdt.internal.core.SourceTypeElementInfo cannot be cast to class org.eclipse.jdt.internal.compiler.env.IModule (org.eclipse.jdt.internal.core.SourceTypeElementInfo and org.eclipse.jdt.internal.compiler.env.IModule are in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @6a175162)
+	at org.eclipse.jdt.internal.core.AbstractModule.getModuleInfo(AbstractModule.java:83)
+	at org.eclipse.jdt.internal.core.NameLookup.getModuleDescriptionInfo(NameLookup.java:867)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.getModule(SearchableEnvironment.java:1085)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.getModule(LookupEnvironment.java:213)
+	at org.eclipse.jdt.internal.compiler.env.ICompilationUnit.module(ICompilationUnit.java:64)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.module(CompilationUnitDeclaration.java:833)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:469)
+	at org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:845)
+	at org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:394)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1024)
+	at org.eclipse.jdt.internal.compiler.Compiler.resolve(Compiler.java:1100)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:280)
+	at org.eclipse.jdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:346)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:193)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1322)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:92)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:37:22.130
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QysrImJJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:37:22.131
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.QysrImJJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:37:22.131
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-10 18:37:22.132
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QysrImJJ => OK
+!SESSION 2019-10-15 13:53:07.134 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-15 13:53:22.664
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-10-15 13:53:25.505
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-10-15 13:53:25.505
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@736f2fb8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9715d26,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:36.015
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:36.053
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4487dce[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:36.081
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:36.535
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.108
+!MESSAGE Boot LS startup time from start to initialized: 8876ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.236
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zYYFTFXlisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.236
+!MESSAGE subscribing to classpath changes: sts4.classpath.zYYFTFXl isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.238
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.240
+!MESSAGE subsribers = {sts4.classpath.zYYFTFXl=Send Classpath Notifications(62)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.240
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.251
+!MESSAGE project IMDB ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.252
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.252
+!MESSAGE Preparing classpath changed notification IMDB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.252
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.252
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.252
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.253
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.253
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.253
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.265
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.268
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zYYFTFXl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.270
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.271
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl IMDB false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.272
+!MESSAGE Preparing classpath changed notification Divisibles
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.273
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.274
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.275
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl Divisibles false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.275
+!MESSAGE Preparing classpath changed notification MultiplicaLlista
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.276
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.277
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.277
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl MultiplicaLlista false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.278
+!MESSAGE Preparing classpath changed notification OrdreExecucio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.278
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.279
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.279
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl OrdreExecucio false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.293
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.294
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.294
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.295
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.295
+!MESSAGE executing callback sts4.classpath.zYYFTFXl 5 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:53:45.354
+!MESSAGE executing callback sts4.classpath.zYYFTFXl SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.366
+!MESSAGE Preparing classpath changed notification Acumulador
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.366
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.367
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.367
+!MESSAGE buffering callback sts4.classpath.zYYFTFXl Acumulador false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.367
+!MESSAGE executing callback sts4.classpath.zYYFTFXl 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 13:54:51.370
+!MESSAGE executing callback sts4.classpath.zYYFTFXl SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-10-15 13:54:59.103
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 14:49:03.101
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zYYFTFXl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 14:49:03.101
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.zYYFTFXl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 14:49:03.101
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-15 14:49:03.102
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zYYFTFXl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:06:03.677
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WedYKiRJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:06:03.677
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WedYKiRJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:06:03.679
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:06:03.679
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WedYKiRJ => OK
+
+!ENTRY org.eclipse.core.resources 4 0 2019-10-17 18:06:23.129
+!MESSAGE Error occurred while reading master table file
+!STACK 0
+java.nio.charset.MalformedInputException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:274)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:339)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:185)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3330)
+	at org.eclipse.core.internal.resources.SaveManager.getBadSequenceNumberErrorMessage(SaveManager.java:1618)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1599)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1271)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1263)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1240)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1151)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-10-17 18:06:23.132
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.IllegalArgumentException: Cannot set lower sequence number for root (previous: 8, new: 5). Location: /home/vesprada/AD_JAVA/repo/PSP/workspace-spring-tool-suite-4-4.3.2.RELEASE/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resourcesTimestamps and tree sequence numbers from file:
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1600)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1271)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1263)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1240)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1151)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-10-17 18:06:24.628
+!MESSAGE An internal error occurred during: "Decoration Calculation".
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:41)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:683)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:204)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:147)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2390)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:296)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:117)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:72)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:265)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1851)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:185)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:148)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:131)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:251)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:333)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2019-10-17 18:06:29.009
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.ui 4 0 2019-10-17 18:06:29.025
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4699)
+	at org.eclipse.swt.SWT.error(SWT.java:4614)
+	at org.eclipse.swt.SWT.error(SWT.java:4585)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:532)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:469)
+	at org.eclipse.swt.widgets.Button.getSelection(Button.java:484)
+	at org.eclipse.ui.dialogs.WorkingSetConfigurationBlock.getSelectedWorkingSets(WorkingSetConfigurationBlock.java:286)
+	at org.eclipse.jdt.ui.wizards.NewJavaProjectWizardPageOne$WorkingSetGroup.getSelectedWorkingSets(NewJavaProjectWizardPageOne.java:774)
+	at org.eclipse.jdt.ui.wizards.NewJavaProjectWizardPageOne.getWorkingSets(NewJavaProjectWizardPageOne.java:1357)
+	at org.eclipse.jdt.internal.ui.wizards.JavaProjectWizard.performFinish(JavaProjectWizard.java:88)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:833)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:472)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:622)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5874)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1400)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5138)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4663)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:130)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:412)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5874)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1400)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5138)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
+!SESSION 2019-10-17 18:06:33.194 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-10-17 18:06:42.626
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-10-17 18:06:43.663
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-10-17 18:06:43.663
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@180e33b0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@270be080,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:04.401
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:04.402
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3e0eb917[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:04.403
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:04.440
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.055
+!MESSAGE Boot LS startup time from start to initialized: 2642ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.096
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uScHjxHRisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.096
+!MESSAGE subscribing to classpath changes: sts4.classpath.uScHjxHR isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.098
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.100
+!MESSAGE subsribers = {sts4.classpath.uScHjxHR=Send Classpath Notifications(65)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.100
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.115
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.116
+!MESSAGE Preparing classpath changed notification Divisibles
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.116
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.118
+!MESSAGE project HolaMundo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.118
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.118
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.119
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.119
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.119
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.119
+!MESSAGE buffering callback sts4.classpath.uScHjxHR Divisibles false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.121
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.121
+!MESSAGE Preparing classpath changed notification HolaMundo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.121
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.121
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.122
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uScHjxHR => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.122
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.122
+!MESSAGE buffering callback sts4.classpath.uScHjxHR HolaMundo false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.122
+!MESSAGE Preparing classpath changed notification MultiplicaLlista
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.123
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.123
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.124
+!MESSAGE buffering callback sts4.classpath.uScHjxHR MultiplicaLlista false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.124
+!MESSAGE Preparing classpath changed notification OrdreExecucio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.124
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.125
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.125
+!MESSAGE buffering callback sts4.classpath.uScHjxHR OrdreExecucio false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.125
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.129
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.130
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.130
+!MESSAGE buffering callback sts4.classpath.uScHjxHR TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.130
+!MESSAGE executing callback sts4.classpath.uScHjxHR 5 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:07:07.161
+!MESSAGE executing callback sts4.classpath.uScHjxHR SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-10-17 18:07:33.514
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.228
+!MESSAGE Preparing classpath changed notification PotGaletes
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.229
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.229
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.230
+!MESSAGE buffering callback sts4.classpath.uScHjxHR PotGaletes false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.230
+!MESSAGE executing callback sts4.classpath.uScHjxHR 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-17 18:08:13.233
+!MESSAGE executing callback sts4.classpath.uScHjxHR SUCCESS [done]
+
+!ENTRY org.eclipse.ui 4 0 2019-10-17 18:11:06.376
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController.computeInformation(AdditionalInfoController.java:541)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1101)
+	at org.eclipse.jface.text.AbstractInformationControlManager.showInformation(AbstractInformationControlManager.java:1091)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController.showInformation(AdditionalInfoController.java:530)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$1.showInformation(AdditionalInfoController.java:477)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer.lambda$1(AdditionalInfoController.java:362)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
