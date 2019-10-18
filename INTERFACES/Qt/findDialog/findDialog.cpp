@@ -5,11 +5,11 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QDialog>
-#include "findDialog.h"
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include "findDialog.h"
 
-
+//El primer FindDialog significa que estas programant un metodo per a ixa classe perque realment estem fora de la classe
  FindDialog::FindDialog(QWidget *parent)
       : QDialog(parent)
   {
