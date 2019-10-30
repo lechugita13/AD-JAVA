@@ -12,6 +12,15 @@ public:
 
 private:
         QTextEdit *editorCentral;
-};
+         bool bandera = false;
+public slots:
+        void slotCerrar();
+        void slotCopiar();
+        void slotPegar();
+        void slotCortar();
+        void slotNuevo();
+        void slotGuardar();
+        void slotCambio();
 
+};
 #endif 
