@@ -4,7 +4,8 @@
 #include <QMessageBox>
 #include <QAction>
 #include <QMenu>
-
+#include <QToolBar>
+#include <QLabel>
 VentanaPrincipal::VentanaPrincipal(
         QWidget * parent ,
         Qt::WindowFlags flags ) : QMainWindow(parent,flags) {
@@ -24,6 +25,17 @@ VentanaPrincipal::VentanaPrincipal(
         accionCortar ->setShortcut(QKeySequence::Cut);
         accionPegar ->setShortcut(QKeySequence::Paste);
         accionNuevo ->setShortcut(QKeySequence::New);
+        
+        accionEscribir = new QAction ("Fantasia 1",this);
+        accionEscribir ->  setIcon(QIcon(":/images/icon.png"));
+        accionEscribir2 = new QAction ("Fantasia 2",this);
+         accionEscribir2 ->  setIcon(QIcon(":/images/icon.png"));
+        accionEscribir3 = new QAction ("Fantasia 3",this);
+         accionEscribir3 ->  setIcon(QIcon(":/images/icon.png"));
+
+        connect(accionEscribir,SIGNAL(triggered()),this,SLOT(slotEscribir()));
+        connect(accionEscribir2,SIGNAL(triggered()),this,SLOT(slotEscribir()));
+        connect(accionEscribir3,SIGNAL(triggered()),this,SLOT(slotEscribir()));
 
         connect(accionCopiar,SIGNAL(triggered()),this,SLOT(slotCopiar()));
         connect(accionPegar,SIGNAL(triggered()),this,SLOT(slotPegar()));
@@ -31,18 +43,16 @@ VentanaPrincipal::VentanaPrincipal(
         connect(accionNuevo,SIGNAL(triggered()),this,SLOT(slotNuevo()));
         connect(accionSalir,SIGNAL(triggered()),this,SLOT(slotCerrar()));
         connect(accionGuardar,SIGNAL(triggered()),this,SLOT(slotGuardar()));
+        
         connect(editorCentral,SIGNAL(textChanged()),this,SLOT(slotCambio()));
+        connect(editorCentral,SIGNAL(textChanged()),this,SLOT(slotRecalcularHerramientas()));
+        connect(editorCentral,SIGNAL(cursorPositionChanged()),this,SLOT(slotRecalcularHerramientas()));
 
         QMenu *menuArchivo;
-        //QMenu *menuCortar;
-        //QMenu *menuPegar;
-        //QMenu *menuCopiar;
         QMenu *menuEditar;
-
+        crearBarraEstado();
         menuArchivo = menuBar() ->addMenu("Archivo");
         menuEditar = menuBar() ->addMenu("Editar");
-        //menuEditar = menuBar() ->addMenu("Pegar");
-        //menuEditar = menuBar() ->addMenu("Copiar");
        
         menuArchivo ->addAction(accionSalir);
         menuEditar ->addAction(accionCortar);
@@ -51,6 +61,16 @@ VentanaPrincipal::VentanaPrincipal(
         menuArchivo ->addAction(accionNuevo);
         menuArchivo ->addAction(accionGuardar);
 
+        editorCentral-> addAction(accionNuevo);
+        editorCentral->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        QToolBar *barraPrincipal;
+        barraPrincipal = this->addToolBar("Prinsipa");
+        barraPrincipal->addAction(accionNuevo);
+        barraPrincipal->addAction(accionEscribir);
+        barraPrincipal->addAction(accionEscribir2);
+        barraPrincipal->addAction(accionEscribir3);
+        
     setWindowIcon(QIcon(":/images/icon.png"));
 }
 
@@ -85,3 +105,37 @@ void VentanaPrincipal::slotCambio (){
     bandera =false;
 }
 
+/*void VentanaPrincipal::crearBarrasHerramientas(){
+    QToolBar *barraPrincipal;
+    barraPrincipal = this->addToolBar("Prinsipa");
+    barraPrincipal->addAction(accionNuevo);
+}*/
+
+void VentanaPrincipal::slotEscribir (void){
+
+    //display->setText(display->text()+qobject_cast<QPushButton*>(sender())->text());
+    
+    QAction * culpable = qobject_cast<QAction *>( sender());
+    QString texto = culpable->text();
+    editorCentral->append(texto);
+}
+
+void VentanaPrincipal::crearBarraEstado(){
+   etiqueta = new QLabel("");
+    statusBar()->addWidget(etiqueta);
+}
+
+void VentanaPrincipal::slotRecalcularHerramientas(){
+  
+   
+    QString texto("");
+    int numParrafos = editorCentral->document()->blockCount();
+    texto = QString ("parrafos: ")+ QString::number(numParrafos);   
+    int col = editorCentral->textCursor().columnNumber();
+    texto = texto + QString(" columna: ")+ QString::number(col);
+    int fila = editorCentral->textCursor().blockNumber();
+    texto = texto + QString(" fila: ")+ QString::number(fila);
+    
+    etiqueta->setText(texto);
+    
+}

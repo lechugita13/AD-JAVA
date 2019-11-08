@@ -3,16 +3,23 @@
 
 #include <QMainWindow>
 #include <QTextEdit>
+#include <QLabel>
 
 class VentanaPrincipal : public QMainWindow {
 Q_OBJECT
 public:
         VentanaPrincipal(QWidget * parent = 0, Qt::WindowFlags flags = 0);
-
-
+        //crearMenus();
+        void crearBarrasHerramientas();
+        void crearBarraEstado();
 private:
         QTextEdit *editorCentral;
          bool bandera = false;
+        QAction * accionEscribir;
+        QAction * accionEscribir2;
+        QAction * accionEscribir3;
+        QLabel * etiqueta;
+
 public slots:
         void slotCerrar();
         void slotCopiar();
@@ -21,6 +28,7 @@ public slots:
         void slotNuevo();
         void slotGuardar();
         void slotCambio();
-
+        void slotEscribir();
+        void slotRecalcularHerramientas();
 };
 #endif 
