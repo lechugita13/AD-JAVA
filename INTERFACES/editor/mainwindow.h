@@ -19,7 +19,9 @@ private:
         QAction * accionEscribir2;
         QAction * accionEscribir3;
         QLabel * etiqueta;
-
+        QAction * accionAbrir;
+        QAction * accionSalir;
+        void CloseEvent(QCloseEvent * event);
 public slots:
         void slotCerrar();
         void slotCopiar();
@@ -30,5 +32,7 @@ public slots:
         void slotCambio();
         void slotEscribir();
         void slotRecalcularHerramientas();
+        void slotAbrir();
+
 };
 #endif 

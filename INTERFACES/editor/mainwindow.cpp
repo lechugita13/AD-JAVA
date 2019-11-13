@@ -6,6 +6,15 @@
 #include <QMenu>
 #include <QToolBar>
 #include <QLabel>
+#include <QDialog>
+#include <QFileDialog>
+#include <QDebug>
+#include <QUrl>
+#include <QTextStream>
+#include <QTextDocument>
+#include <QTextBlock>
+#include <QFile>
+#include <QApplication>
 VentanaPrincipal::VentanaPrincipal(
         QWidget * parent ,
         Qt::WindowFlags flags ) : QMainWindow(parent,flags) {
@@ -47,6 +56,9 @@ VentanaPrincipal::VentanaPrincipal(
         connect(editorCentral,SIGNAL(textChanged()),this,SLOT(slotCambio()));
         connect(editorCentral,SIGNAL(textChanged()),this,SLOT(slotRecalcularHerramientas()));
         connect(editorCentral,SIGNAL(cursorPositionChanged()),this,SLOT(slotRecalcularHerramientas()));
+        accionAbrir = new QAction("Abrir",this);
+        accionAbrir->setShortcut(QKeySequence::Open);
+        connect(accionAbrir,SIGNAL(triggered()),this,SLOT(slotAbrir()));
 
         QMenu *menuArchivo;
         QMenu *menuEditar;
@@ -54,6 +66,7 @@ VentanaPrincipal::VentanaPrincipal(
         menuArchivo = menuBar() ->addMenu("Archivo");
         menuEditar = menuBar() ->addMenu("Editar");
        
+        menuArchivo ->addAction(accionAbrir);
         menuArchivo ->addAction(accionSalir);
         menuEditar ->addAction(accionCortar);
         menuEditar ->addAction(accionCopiar);
@@ -71,11 +84,18 @@ VentanaPrincipal::VentanaPrincipal(
         barraPrincipal->addAction(accionEscribir2);
         barraPrincipal->addAction(accionEscribir3);
         
+        
     setWindowIcon(QIcon(":/images/icon.png"));
 }
 
+
 void VentanaPrincipal::slotCerrar (){
-    this -> close();
+
+    qDebug()<<"Error";
+    if (!bandera) slotGuardar();
+    QApplication::exit;
+
+    //this -> close();
 }
 void VentanaPrincipal::slotCopiar (){
     editorCentral ->copy();
@@ -86,6 +106,12 @@ void VentanaPrincipal::slotPegar (){
 void VentanaPrincipal::slotCortar (){
     editorCentral ->cut();
 }
+void VentanaPrincipal::CloseEvent(QCloseEvent * event){
+
+    qDebug()<<"Error";
+    if (bandera) slotGuardar();
+    QApplication::exit;
+}
 void VentanaPrincipal::slotNuevo (){    
     if (bandera==true)
     {
@@ -94,9 +120,27 @@ void VentanaPrincipal::slotNuevo (){
     }
 }
 void VentanaPrincipal::slotGuardar (){
+
+    
   int r = QMessageBox::warning(this,"Editor Clase","Quieres guardar el documento PENK?\n",QMessageBox::Yes | QMessageBox::No
     | QMessageBox::Cancel);
-    if (r == QMessageBox::Yes) bandera=true;
+    if (r == QMessageBox::Yes){
+     QString titulo("abrir un documentillo");
+    QString rutaFichero;
+    rutaFichero = 
+    QFileDialog::getSaveFileName(this,titulo);
+    QFile fichero(rutaFichero);
+    QTextStream stream(&fichero);
+     if(!fichero.open(QIODevice::WriteOnly)){
+        qDebug()<<"Algo va mal con el fichero";
+        return;
+    }
+        for(int i=0;i<editorCentral->document()->blockCount();i++){
+            stream<< editorCentral->document()->findBlockByNumber(i).text()<<endl;
+        }
+
+    fichero.close();
+    }
     if (!bandera) editorCentral->clear();
    
 }
@@ -104,6 +148,7 @@ void VentanaPrincipal::slotGuardar (){
 void VentanaPrincipal::slotCambio (){
     bandera =false;
 }
+
 
 /*void VentanaPrincipal::crearBarrasHerramientas(){
     QToolBar *barraPrincipal;
@@ -125,6 +170,35 @@ void VentanaPrincipal::crearBarraEstado(){
     statusBar()->addWidget(etiqueta);
 }
 
+void VentanaPrincipal::slotAbrir(){
+    QString titulo("abrir un documentillo");
+     qDebug() << "Antes de abrir el dialogo";
+     QString rutaFichero;
+     rutaFichero = 
+    QFileDialog::getOpenFileName(this,titulo);
+    qDebug() << "Fcihero= "<< rutaFichero;
+    //QFileDialog * dialogo = new QFileDialog();
+   //QUrl ruta = QFileDialog::directoryUrl();
+
+
+    editorCentral->clear();
+    QFile fichero(rutaFichero);
+    if(!fichero.open(QIODevice::ReadOnly)){
+        qDebug()<<"Algo va mal con el fichero";
+        return;
+
+
+    }
+    QTextStream stream(&fichero);
+    
+     QString line;
+    while (stream.readLineInto(&line)) {
+     editorCentral->append(line);
+    }
+
+    qDebug() << stream.readLine();
+    fichero.close();
+}
 void VentanaPrincipal::slotRecalcularHerramientas(){
   
    
