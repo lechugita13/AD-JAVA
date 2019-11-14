@@ -1,10 +1,16 @@
 package com.simarro.practicaclasse;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +30,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText etDni;
     private EditText etNombre;
     private RadioButton rbSexoHombre;
+    private SwipeRefreshLayout swipeRefreshLayout;
+
     private Button btnInsertar;
+
+    public void cargarDatos(){
+
+        alumnos.clear();
+        for (int i =1;i<10;i++){
+            alumnos.add(new Alumno("1234567"+i,"Nombre"+i,(i%2==0)?'H':'M'));
+
+        }
+        swipeRefreshLayout.setRefreshing(false);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         alumnos=new ArrayList<>();
 
-        for (int i =1;i<10;i++){
-            alumnos.add(new Alumno("1234567"+i,"Nombre"+i,(i%2==0)?'H':'M'));
 
-        }
         recyclerView = (RecyclerView) findViewById(R.id.rv_alumnos);
         adaptador = new AdaptadorAlumnos(alumnos, this);
         recyclerView.setAdapter(adaptador);
@@ -48,7 +63,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnInsertar = findViewById(R.id.btn_insertar);
         btnInsertar.setOnClickListener(this);
 
+        ItemTouchHelper.SimpleCallback myCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+                switch (direction){
+                    case ItemTouchHelper.RIGHT:
+                        alumnos.remove(viewHolder.getAdapterPosition());
+                        adaptador.notifyItemRemoved(viewHolder.getAdapterPosition());
+                        break;
+                    case ItemTouchHelper.LEFT:
+                        Toast.makeText(MainActivity.this,"PACA EL ALTRE COSTAT",Toast.LENGTH_LONG).show();
+                        adaptador.notifyDataSetChanged();
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+
+                c.clipRect(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),dX,viewHolder.itemView.getBottom());
+                if(dX< recyclerView.getWidth()/3)
+                    c.drawColor(Color.GRAY);
+                else
+                    c.drawColor(Color.RED);
+                    Drawable delete = getDrawable(R.drawable.ic_delete_black_24dp);
+                    delete.setBounds(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),viewHolder.itemView.getHeight(),viewHolder.itemView.getBottom());
+                    delete.draw(c);
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+
+            }
+        };
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(myCallback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.srl);
+        cargarDatos();
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                cargarDatos();
+                adaptador.notifyDataSetChanged();
+            }
+        }
+
+
+        );
+        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
         recyclerView.setLayoutManager(layoutManager);
+
 
     }
 
