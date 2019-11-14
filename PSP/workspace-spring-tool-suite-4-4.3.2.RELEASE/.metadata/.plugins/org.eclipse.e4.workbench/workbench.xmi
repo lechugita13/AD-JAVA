@@ -119,7 +119,7 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_uwc1Mut6EemUCqqaoU-S4g" containerData="7500" selectedElement="_zIjVYP_UEemlRo2pZGA8Nw" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_zIjVYP_UEemlRo2pZGA8Nw" containerData="5000" selectedElement="_uwc1Net6EemUCqqaoU-S4g">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_zIjVYP_UEemlRo2pZGA8Nw" containerData="5000" selectedElement="_uwc1NOt6EemUCqqaoU-S4g">
                 <children xsi:type="advanced:Placeholder" xmi:id="_uwc1NOt6EemUCqqaoU-S4g" elementId="org.eclipse.ui.editorss" containerData="6700" ref="_uwddQ-t6EemUCqqaoU-S4g">
                   <tags>Maximized</tags>
                 </children>
@@ -411,7 +411,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uwddrut6EemUCqqaoU-S4g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_WUE54P_TEemlRo2pZGA8Nw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uwf5u-t6EemUCqqaoU-S4g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_b3BxoAcREeqVPqgeEu_Epg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_uwf5u-t6EemUCqqaoU-S4g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uwddu-t6EemUCqqaoU-S4g" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -446,7 +446,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uwdeAOt6EemUCqqaoU-S4g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_WUJLUP_TEemlRo2pZGA8Nw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uwf5bet6EemUCqqaoU-S4g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_b3FcAAcREeqVPqgeEu_Epg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_uwf5bet6EemUCqqaoU-S4g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_uwdeC-t6EemUCqqaoU-S4g" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2685,7 +2685,7 @@
   <addons xmi:id="_uwggget6EemUCqqaoU-S4g" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_uwgggut6EemUCqqaoU-S4g" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_uwggg-t6EemUCqqaoU-S4g" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_VnT6gP_TEemlRo2pZGA8Nw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_uwgghet6EemUCqqaoU-S4g" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_uwgghut6EemUCqqaoU-S4g" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_uwggh-t6EemUCqqaoU-S4g" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

@@ -3515,3 +3515,187 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.ui 2 2 2019-11-05 15:27:52.636
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2019-11-14 20:02:49.665 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-11-14 20:03:18.597
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-11-14 20:03:23.908
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-11-14 20:03:23.908
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57ed8f95,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c25deb0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:39.830
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:39.830
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2e729fea[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:39.876
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:40.283
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.204
+!MESSAGE Boot LS startup time from start to initialized: 6250ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.386
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.iPkGpVMfisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.386
+!MESSAGE subscribing to classpath changes: sts4.classpath.iPkGpVMf isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.388
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.391
+!MESSAGE subsribers = {sts4.classpath.iPkGpVMf=Send Classpath Notifications(60)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.391
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.396
+!MESSAGE project PotGaletes ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.397
+!MESSAGE Preparing classpath changed notification PotGaletes
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.397
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.397
+!MESSAGE project HolaMundo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.397
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.397
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.398
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.398
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.398
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.399
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.399
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.399
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.iPkGpVMf => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.400
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.400
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf PotGaletes false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.401
+!MESSAGE Preparing classpath changed notification Divisibles
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.401
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.402
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.402
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf Divisibles false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.402
+!MESSAGE Preparing classpath changed notification HolaMundo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.403
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.403
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.403
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf HolaMundo false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.403
+!MESSAGE Preparing classpath changed notification MultiplicaLlista
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.404
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.404
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.405
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf MultiplicaLlista false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.405
+!MESSAGE Preparing classpath changed notification OrdreExecucio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.405
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.406
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.406
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf OrdreExecucio false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.406
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.406
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.407
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.407
+!MESSAGE buffering callback sts4.classpath.iPkGpVMf TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.407
+!MESSAGE executing callback sts4.classpath.iPkGpVMf 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:03:46.476
+!MESSAGE executing callback sts4.classpath.iPkGpVMf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:35:19.356
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.iPkGpVMf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:35:19.356
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.iPkGpVMf
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:35:19.356
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-11-14 20:35:19.357
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.iPkGpVMf => OK
+
+!ENTRY org.eclipse.ui 2 2 2019-11-14 20:35:20.101
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
