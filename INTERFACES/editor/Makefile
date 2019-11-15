@@ -17,7 +17,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+INCPATH       = -I. -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -52,12 +52,16 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = main.cpp \
+SOURCES       = DBuscarRemplazar.cpp \
+		main.cpp \
 		mainwindow.cpp qrc_resources.cpp \
+		moc_DBuscarRemplazar.cpp \
 		moc_mainwindow.cpp
-OBJECTS       = main.o \
+OBJECTS       = DBuscarRemplazar.o \
+		main.o \
 		mainwindow.o \
 		qrc_resources.o \
+		moc_DBuscarRemplazar.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -138,7 +142,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		editor.pro mainwindow.h main.cpp \
+		editor.pro DBuscarRemplazar.h \
+		mainwindow.h DBuscarRemplazar.cpp \
+		main.cpp \
 		mainwindow.cpp
 QMAKE_TARGET  = editor
 DESTDIR       = 
@@ -148,7 +154,7 @@ TARGET        = editor
 first: all
 ####### Build rules
 
-editor:  $(OBJECTS)  
+editor: ui_DBuscarRemplazar.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: editor.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -336,8 +342,9 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resources.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents DBuscarRemplazar.h mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents DBuscarRemplazar.cpp main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents DBuscarRemplazar.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -374,9 +381,15 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_DBuscarRemplazar.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_DBuscarRemplazar.cpp moc_mainwindow.cpp
+moc_DBuscarRemplazar.cpp: DBuscarRemplazar.h \
+		ui_DBuscarRemplazar.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/editor/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/editor -I/home/vesprada/AD_JAVA/repo/INTERFACES/editor -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include DBuscarRemplazar.h -o moc_DBuscarRemplazar.cpp
+
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
@@ -386,17 +399,26 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all:
+compiler_uic_make_all: ui_DBuscarRemplazar.h
 compiler_uic_clean:
+	-$(DEL_FILE) ui_DBuscarRemplazar.h
+ui_DBuscarRemplazar.h: DBuscarRemplazar.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic DBuscarRemplazar.ui -o ui_DBuscarRemplazar.h
+
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
 compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+DBuscarRemplazar.o: DBuscarRemplazar.cpp DBuscarRemplazar.h \
+		ui_DBuscarRemplazar.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DBuscarRemplazar.o DBuscarRemplazar.cpp
 
 main.o: main.cpp mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
@@ -406,6 +428,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h
 
 qrc_resources.o: qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources.o qrc_resources.cpp
+
+moc_DBuscarRemplazar.o: moc_DBuscarRemplazar.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_DBuscarRemplazar.o moc_DBuscarRemplazar.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

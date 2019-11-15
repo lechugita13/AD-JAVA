@@ -22,6 +22,7 @@ private:
         QAction * accionAbrir;
         QAction * accionSalir;
         void CloseEvent(QCloseEvent * event);
+        QAction * accionDesigner;
 public slots:
         void slotCerrar();
         void slotCopiar();
@@ -33,6 +34,7 @@ public slots:
         void slotEscribir();
         void slotRecalcularHerramientas();
         void slotAbrir();
+        void slotDesigner();
 
 };
 #endif 

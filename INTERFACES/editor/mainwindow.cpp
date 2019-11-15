@@ -15,6 +15,8 @@
 #include <QTextBlock>
 #include <QFile>
 #include <QApplication>
+#include "DBuscarRemplazar.h"
+
 VentanaPrincipal::VentanaPrincipal(
         QWidget * parent ,
         Qt::WindowFlags flags ) : QMainWindow(parent,flags) {
@@ -35,12 +37,15 @@ VentanaPrincipal::VentanaPrincipal(
         accionPegar ->setShortcut(QKeySequence::Paste);
         accionNuevo ->setShortcut(QKeySequence::New);
         
+
         accionEscribir = new QAction ("Fantasia 1",this);
         accionEscribir ->  setIcon(QIcon(":/images/icon.png"));
         accionEscribir2 = new QAction ("Fantasia 2",this);
          accionEscribir2 ->  setIcon(QIcon(":/images/icon.png"));
         accionEscribir3 = new QAction ("Fantasia 3",this);
          accionEscribir3 ->  setIcon(QIcon(":/images/icon.png"));
+        
+        accionDesigner = new QAction("BuscarRemplazar",this);
 
         connect(accionEscribir,SIGNAL(triggered()),this,SLOT(slotEscribir()));
         connect(accionEscribir2,SIGNAL(triggered()),this,SLOT(slotEscribir()));
@@ -60,6 +65,8 @@ VentanaPrincipal::VentanaPrincipal(
         accionAbrir->setShortcut(QKeySequence::Open);
         connect(accionAbrir,SIGNAL(triggered()),this,SLOT(slotAbrir()));
 
+        connect(accionDesigner,SIGNAL(triggered()),this,SLOT(slotDesigner()));
+
         QMenu *menuArchivo;
         QMenu *menuEditar;
         crearBarraEstado();
@@ -73,6 +80,7 @@ VentanaPrincipal::VentanaPrincipal(
         menuEditar ->addAction(accionPegar);
         menuArchivo ->addAction(accionNuevo);
         menuArchivo ->addAction(accionGuardar);
+        menuArchivo -> addAction(accionDesigner);
 
         editorCentral-> addAction(accionNuevo);
         editorCentral->setContextMenuPolicy(Qt::ActionsContextMenu);
@@ -212,4 +220,10 @@ void VentanaPrincipal::slotRecalcularHerramientas(){
     
     etiqueta->setText(texto);
     
+}
+
+void VentanaPrincipal::slotDesigner(void){
+        QString texto = editorCentral->textCursor().selectedText();
+        DBuscarRemplazar *dbr = new DBuscarRemplazar(texto);
+        dbr->show();  
 }
