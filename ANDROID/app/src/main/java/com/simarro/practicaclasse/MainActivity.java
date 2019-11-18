@@ -10,6 +10,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -88,14 +92,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
 
-                c.clipRect(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),dX,viewHolder.itemView.getBottom());
-                if(dX< recyclerView.getWidth()/3)
-                    c.drawColor(Color.GRAY);
-                else
-                    c.drawColor(Color.RED);
+
+                Paint pincel = new Paint();
+                pincel.setColor(Color.WHITE);
+                int sizetext = getResources().getDimensionPixelSize(R.dimen.textsize);
+                pincel.setTextSize(sizetext);
+
+                //Vox
+                if (dX > 0){
+                    c.clipRect(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),dX,viewHolder.itemView.getBottom());
+                    if(dX< recyclerView.getWidth()/3)
+                        c.drawColor(Color.GRAY);
+                    else
+                        c.drawColor(Color.RED);
                     Drawable delete = getDrawable(R.drawable.ic_delete_black_24dp);
                     delete.setBounds(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),viewHolder.itemView.getHeight(),viewHolder.itemView.getBottom());
                     delete.draw(c);
+
+                    pincel.setTextAlign(Paint.Align.LEFT);
+                    c.drawText(getResources().getString(R.string.eliminar)
+                            ,viewHolder.itemView.getHeight()
+                            ,viewHolder.itemView.getBottom()-viewHolder.itemView.getHeight()/2+sizetext/2
+                            ,pincel);
+                }//ERC
+                else if(dX < 0){
+
+                    c.clipRect(viewHolder.itemView.getRight()+dX,viewHolder.itemView.getTop(),viewHolder.itemView.getRight(),viewHolder.itemView.getBottom());
+                    if(Math.abs(dX)< recyclerView.getWidth()/3) {
+                        c.drawColor(Color.GREEN);
+                        //Snackbar.make(recyclerView, "Estic dins del else", Snackbar.LENGTH_SHORT).show();
+                    }
+                    else
+                        c.drawColor(Color.BLUE);
+                    Drawable edit = getDrawable(R.drawable.ic_edit_black_24dp);
+                    edit.setBounds(viewHolder.itemView.getRight()-viewHolder.itemView.getHeight(),viewHolder.itemView.getTop(),viewHolder.itemView.getRight(),viewHolder.itemView.getBottom());
+                    edit.draw(c);
+                    String editarString = getResources().getString(R.string.editar);
+                    Rect pepe = new Rect();
+                pincel.getTextBounds(editarString,0,editarString.length(),pepe);
+                    pincel.setTextAlign(Paint.Align.RIGHT);
+                    c.drawText(editarString
+                            ,viewHolder.itemView.getRight()-viewHolder.itemView.getHeight()
+                            ,viewHolder.itemView.getBottom()-viewHolder.itemView.getHeight()/2+sizetext/2
+                            ,pincel);
+                }
+
+
+
+
+
+
+
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
 
             }

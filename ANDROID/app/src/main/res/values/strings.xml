@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PracticaClasse</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
 </resources>
