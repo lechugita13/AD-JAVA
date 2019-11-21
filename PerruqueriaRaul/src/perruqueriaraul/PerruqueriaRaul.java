@@ -19,7 +19,8 @@ public class PerruqueriaRaul {
     /**
      * @param args the command line arguments
      */
-    private static final Semaphore CADIRES = new Semaphore(5);
+    //private static final Semaphore CADIRES = new Semaphore(5);
+    private static final int CADIRES =0;
     private static final Semaphore MUTEX = new Semaphore(1);
     private static ArrayList<Client> llistaClients = new ArrayList<>();
     public static class Perruquer extends Thread{
@@ -49,22 +50,23 @@ public class PerruqueriaRaul {
 
         @Override
         public void run() {
-            try {
+          
                 
-                CADIRES.acquire();
+               
                 
                 llistaClients.add(this);
                 System.out.println("Client Arriba");
-            } catch (InterruptedException ex) {
-                Logger.getLogger(PerruqueriaRaul.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
         }
         
     }
     public static void main(String[] args) {
         // TODO code application logic here
         
-        
+        for (int i = 0; i < 15; i++) {
+           
+            
+        }
     }
     
 }
