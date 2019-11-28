@@ -1,2 +1,2 @@
-include ':app'
+include ':PracticaClasseAlumnos'
 rootProject.name='PracticaClasse'
