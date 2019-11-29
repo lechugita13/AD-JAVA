@@ -38,14 +38,22 @@ void Bola::chocar(Bola *otra){
     Bola * arriba;
     Bola * abajo;
 
-     if (distancia(*otra)>20) return;
+       if (distancia(*otra)>20) return;
     if (this->posX > otra->posX)
     {
         izquierda = otra;
         derecha = this;
     }else{
          derecha = otra;
-        izquierda = this;
+        izquierda = this;}  
+
+    if (this->posY > otra->posY)
+    {
+        arriba = this;
+        abajo = otra;
+    }else{
+         arriba = otra;
+        abajo = this;
        
     }
     if (izquierda->velX > derecha->velX)
@@ -53,25 +61,14 @@ void Bola::chocar(Bola *otra){
         float aux = izquierda->velX;
         izquierda -> velX = derecha->velX;
         derecha->velX = aux;
-    }
-    
-    if (this->posY > otra->posY)
+
+    }if (arriba->velY > abajo->velY)
     {
-        abajo = otra;
-        arriba = this;
-    }else{
-         arriba = otra;
-        abajo = this;
-       
+        float auxY = arriba->velY;
+        arriba -> velY = abajo->velY;
+        abajo->velY = auxY;
     }
-    if (abajo->velX > arriba->velX)
-    {
-        float aux = abajo->velX;
-        abajo -> velX = arriba->velX;
-        arriba->velX = aux;
-    }
-    
-    
+   
 }
 float Bola::distancia(Bola otra){
     float x = this->posX - otra.posX;

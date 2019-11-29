@@ -20,7 +20,7 @@ MainWindow::MainWindow(
             resize(800,600);
 
            b =new Bola(100.0,100.0,10.0,10.0,20);
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 200; i++)
         {
             float velX1 = aleatorizador.bounded(-3,3);
             float velY1 = aleatorizador.bounded(-3,3);
