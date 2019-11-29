@@ -2,17 +2,20 @@
 #define BOLA_H
 
 
-class Bola {
 
-    private:
+class Bola {
+    public:
     float posX;
     float posY;
     float velX;
     float velY;
+    
+    float radio;
+    float distancia(Bola otra);
+    void chocar(Bola *otra);
 
-    public:
-    Bola(float,float,float,float);
-
+    Bola(float posX,float posY,float velX,float velY,float radio);
+    void moverBola(int width,int height);
 
 };
 
