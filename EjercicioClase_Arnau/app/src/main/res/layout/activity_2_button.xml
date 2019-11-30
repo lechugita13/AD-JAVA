@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:text="Nuevo Robot"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:hint="Nombre"
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_titulo">
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Material"
+        android:layout_below="@+id/et_dni">
+    </EditText>
+    <EditText
+        android:id="@+id/et_año"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Año"
+        android:layout_below="@+id/et_dni">
+    </EditText>
+    <TextView
+        android:id="@+id/tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo"
+        android:layout_below="@+id/et_nombre">
+    </TextView>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_insertar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear robot"
+        android:layout_below="@+id/rg_sexo">
+    </Button>
+
+
+</LinearLayout>

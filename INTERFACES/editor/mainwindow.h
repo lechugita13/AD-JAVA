@@ -12,6 +12,7 @@ public:
         //crearMenus();
         void crearBarrasHerramientas();
         void crearBarraEstado();
+		void crearMenu();
 private:
         QTextEdit *editorCentral;
          bool bandera = false;
