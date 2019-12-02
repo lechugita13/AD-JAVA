@@ -1,6 +1,8 @@
 package com.example.robotsbenfet;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -17,6 +19,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,9 +27,10 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, ComponentCallbacks2 {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button botoCrear;
     private RecyclerView recyclerView;
@@ -36,22 +40,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SwipeRefreshLayout swipeRefreshLayout;
 
 
-
-    public void cargarDatos(){
+    public void cargarDatos() {
 
         alumnos.clear();
-        for (int i =1;i<10;i++){
-            alumnos.add(new Alumno("1234567"+i,"Nombre"+i,(i%2==0)?'H':'M'));
+        for (int i = 1; i < 10; i++) {
+            alumnos.add(new Alumno("1234567" + i, "Nombre" + i, (i % 2 == 0) ? 'H' : 'M'));
 
         }
         swipeRefreshLayout.setRefreshing(false);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        alumnos=new ArrayList<>();
+        alumnos = new ArrayList<>();
 
         botoCrear = findViewById(R.id.botoCrear);
         recyclerView = (RecyclerView) findViewById(R.id.rv_alumnos);
@@ -59,11 +63,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setAdapter(adaptador);
         adaptador.setOnClickListener(this);
         botoCrear.setOnClickListener(this);
-        layoutManager=new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
 
-        ItemTouchHelper.SimpleCallback myCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
+        ItemTouchHelper.SimpleCallback myCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
@@ -72,13 +76,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
-                switch (direction){
+                switch (direction) {
                     case ItemTouchHelper.RIGHT:
                         alumnos.remove(viewHolder.getAdapterPosition());
                         adaptador.notifyItemRemoved(viewHolder.getAdapterPosition());
                         break;
                     case ItemTouchHelper.LEFT:
-                        Toast.makeText(MainActivity.this,"PACA EL ALTRE COSTAT",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "PACA EL ALTRE COSTAT", Toast.LENGTH_LONG).show();
                         adaptador.notifyDataSetChanged();
                         break;
                 }
@@ -95,48 +99,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pincel.setTextSize(sizetext);
 
                 //Vox
-                if (dX > 0){
-                    c.clipRect(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),dX,viewHolder.itemView.getBottom());
-                    if(dX< recyclerView.getWidth()/3)
+                if (dX > 0) {
+                    c.clipRect(viewHolder.itemView.getLeft(), viewHolder.itemView.getTop(), dX, viewHolder.itemView.getBottom());
+                    if (dX < recyclerView.getWidth() / 3)
                         c.drawColor(Color.GRAY);
                     else
                         c.drawColor(Color.RED);
                     Drawable delete = getDrawable(R.drawable.delelte);
-                    delete.setBounds(viewHolder.itemView.getLeft(),viewHolder.itemView.getTop(),viewHolder.itemView.getHeight(),viewHolder.itemView.getBottom());
+                    delete.setBounds(viewHolder.itemView.getLeft(), viewHolder.itemView.getTop(), viewHolder.itemView.getHeight(), viewHolder.itemView.getBottom());
                     delete.draw(c);
 
                     pincel.setTextAlign(Paint.Align.LEFT);
                     c.drawText(getResources().getString(R.string.eliminar)
-                            ,viewHolder.itemView.getHeight()
-                            ,viewHolder.itemView.getBottom()-viewHolder.itemView.getHeight()/2+sizetext/2
-                            ,pincel);
+                            , viewHolder.itemView.getHeight()
+                            , viewHolder.itemView.getBottom() - viewHolder.itemView.getHeight() / 2 + sizetext / 2
+                            , pincel);
                 }//ERC
-                else if(dX < 0){
+                else if (dX < 0) {
 
-                    c.clipRect(viewHolder.itemView.getRight()+dX,viewHolder.itemView.getTop(),viewHolder.itemView.getRight(),viewHolder.itemView.getBottom());
-                    if(Math.abs(dX)< recyclerView.getWidth()/3) {
+                    c.clipRect(viewHolder.itemView.getRight() + dX, viewHolder.itemView.getTop(), viewHolder.itemView.getRight(), viewHolder.itemView.getBottom());
+                    if (Math.abs(dX) < recyclerView.getWidth() / 3) {
                         c.drawColor(Color.GREEN);
                         //Snackbar.make(recyclerView, "Estic dins del else", Snackbar.LENGTH_SHORT).show();
-                    }
-                    else
+                    } else
                         c.drawColor(Color.BLUE);
                     Drawable edit = getDrawable(R.drawable.edit);
-                    edit.setBounds(viewHolder.itemView.getRight()-viewHolder.itemView.getHeight(),viewHolder.itemView.getTop(),viewHolder.itemView.getRight(),viewHolder.itemView.getBottom());
+                    edit.setBounds(viewHolder.itemView.getRight() - viewHolder.itemView.getHeight(), viewHolder.itemView.getTop(), viewHolder.itemView.getRight(), viewHolder.itemView.getBottom());
                     edit.draw(c);
                     String editarString = getResources().getString(R.string.editar);
                     Rect pepe = new Rect();
-                    pincel.getTextBounds(editarString,0,editarString.length(),pepe);
+                    pincel.getTextBounds(editarString, 0, editarString.length(), pepe);
                     pincel.setTextAlign(Paint.Align.RIGHT);
                     c.drawText(editarString
-                            ,viewHolder.itemView.getRight()-viewHolder.itemView.getHeight()
-                            ,viewHolder.itemView.getBottom()-viewHolder.itemView.getHeight()/2+sizetext/2
-                            ,pincel);
+                            , viewHolder.itemView.getRight() - viewHolder.itemView.getHeight()
+                            , viewHolder.itemView.getBottom() - viewHolder.itemView.getHeight() / 2 + sizetext / 2
+                            , pincel);
                 }
-
-
-
-
-
 
 
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
@@ -168,20 +166,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        Intent i = new Intent(this,FormularioRobots.class);
-        startActivityForResult(i,1);
+        Intent i = new Intent(this, FormularioRobots.class);
+        startActivityForResult(i, 1);
 
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
 
-    public void onActivityResult(int requestCode, Intent intent) {
-        if (requestCode == 1){
-            System.out.println("Ha tornat");
-            Alumno alumno = (Alumno) intent.getSerializableExtra("Alumno");
-            alumnos.add(alumno);
+
+            try {
+
+
+                Alumno a = (Alumno) data.getSerializableExtra("alumno");
+                Log.d("Hola", "onClick: " + a);
+
+                alumnos.add(a);
+            } catch (NullPointerException e) {
+
+            }
+
 
         }
+
     }
+
 
 }

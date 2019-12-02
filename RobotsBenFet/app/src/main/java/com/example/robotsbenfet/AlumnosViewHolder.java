@@ -17,21 +17,21 @@ public class AlumnosViewHolder extends RecyclerView.ViewHolder {
     private TextView tvDni;
     private Context contexto;
 
-    public AlumnosViewHolder(@NonNull View itemView,Context context) {
+    public AlumnosViewHolder(@NonNull View itemView, Context context) {
         super(itemView);
         imgSexo = itemView.findViewById(R.id.img_sexo);
-        tvNombre=itemView.findViewById(R.id.tv_nombre);
+        tvNombre = itemView.findViewById(R.id.tv_nombre);
         tvDni = itemView.findViewById(R.id.tv_dni);
-        contexto=context;
+        contexto = context;
 
 
     }
 
-    public void bindAlumno(Alumno a){
-        if (a.getSexo()=='H'){
+    public void bindAlumno(Alumno a) {
+        if (a.getSexo() == 'H') {
             imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.ic_launcher_background));
 
-        }else{
+        } else {
             imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.ic_launcher_foreground));
         }
 
