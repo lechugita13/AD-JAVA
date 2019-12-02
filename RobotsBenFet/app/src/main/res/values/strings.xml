@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RobotsBenFet</string>
+    <string name="editar">editar</string>
+    <string name="eliminar">eliminar</string>
+</resources>

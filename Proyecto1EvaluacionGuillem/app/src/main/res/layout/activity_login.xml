@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/nebulosa">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulo"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textColor="@color/fosforito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="247dp"
+        android:layout_height="407dp"
+
+        android:layout_marginTop="101dp"
+        android:background="@color/colorFondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.096"
+        >
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tarantula"
+            ></ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="121dp"
+                android:layout_height="113dp"
+                android:background="@drawable/login"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp"
+                ></androidx.appcompat.widget.AppCompatImageView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/imputEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/fosforito">
+                <EditText
+                    android:id="@+id/nombreUsuario"
+                    android:layout_width="180dp"
+                    android:drawableStart="@android:drawable/sym_action_email"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fosforito"
+                    android:textColorHint="@color/fosforito"
+                    android:hint="Usuario"
+                    android:layout_marginLeft="30dp"
+
+                    android:layout_marginTop="20dp"
+                    ></EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                ></Switch>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/imputPass"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/fosforito"
+                android:layout_marginLeft="30dp"
+
+                >
+                <EditText
+                    android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                    android:id="@+id/password"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fosforito"
+                    android:textColorHint="@color/fosforito"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+
+                    ></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login"
+                android:text="@string/login"
+                android:gravity="center"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/blanco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+
+            <TextView
+                android:id="@+id/forgot"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot"
+                android:textColor="@color/blanco">
+
+            </TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

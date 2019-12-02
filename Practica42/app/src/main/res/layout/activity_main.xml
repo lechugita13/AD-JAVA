@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:background="@drawable/gradient1">
+
+<EditText
+    android:inputType="number"
+    android:background="@drawable/ic_launcher_background"
+    android:textSize="50dp"
+    android:textAlignment="center"
+
+   >
+
+</EditText>
+<TableRow>
+    <Button
+        android:id="@+id/siete"
+        android:text="7"
+        android:background="@drawable/gradient1">
+
+    </Button>
+    <Button
+        android:id="@+id/ocho"
+        android:text="8"
+        android:background="@drawable/gradient1">
+
+    </Button>
+    <Button
+        android:id="@+id/nueve"
+        android:text="9"
+        android:background="@drawable/gradient1">
+
+    </Button>
+
+</TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/seis"
+            android:text="6"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/gradient2">
+
+        </Button>
+        <Button
+            android:id="@+id/cinco"
+            android:text="5"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/gradient2">
+
+        </Button>
+        <Button
+            android:id="@+id/quatro"
+            android:text="4"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/gradient2">
+
+        </Button>
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/uno"
+            android:text="1"
+            android:background="@drawable/gradient3">
+
+        </Button>
+        <Button
+            android:id="@+id/dos"
+            android:text="2"
+            android:background="@drawable/gradient3">
+
+        </Button>
+        <Button
+            android:id="@+id/tres"
+            android:text="3"
+            android:background="@drawable/gradient3">
+
+        </Button>
+
+    </TableRow>
+    <Button
+        android:id="@+id/cero"
+        android:text="0"
+        android:background="@drawable/fantasia">
+
+    </Button>
+
+</TableLayout>

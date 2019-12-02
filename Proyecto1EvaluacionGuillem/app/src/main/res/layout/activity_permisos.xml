@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textPermisos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textPermisos"
+        android:textSize="@dimen/textPrincipalActivity"/>
+
+    <Button
+        android:id="@+id/botoCrida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textCrida" />
+
+    <Button
+        android:id="@+id/botoFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/botoFoto" />
+
+    <Button
+        android:id="@+id/botoWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/botoWeb" />
+
+    <Button
+        android:id="@+id/botoFormulario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/botoFormulari" />
+
+
+</LinearLayout>
