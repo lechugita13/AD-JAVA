@@ -92,10 +92,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             private void editarRobots(int adapterPosition) {
 
-                Intent intent = new Intent();
+                Intent intent = new Intent(this,EditarRobots.class);
                 Bundle pasarPosicio = new Bundle();
                 pasarPosicio.putInt("posicioArray", adapterPosition);
-                intent.putExtra("alumnos", alumnos);
+                pasarPosicio.putSerializable("alumnos", alumnos);
 
                 intent.putExtras(pasarPosicio);
                 startActivityForResult(intent, 2);

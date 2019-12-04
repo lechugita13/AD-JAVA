@@ -59,6 +59,7 @@ public class JPanel extends JFrame {
                     public void actionPerformed(ActionEvent e) {
                         
                         if (b1.getIcon() == icon) {
+                            System.out.println("vuic saber si va");
                              int input = JOptionPane.showConfirmDialog(null, "Seguro que quieres realizar esta reserva?");
                              if (input == 0) {
                                 
@@ -79,8 +80,11 @@ public class JPanel extends JFrame {
         gl.setVgap(10);
         jf.setBounds(200, 200, 1000, 1000);
         jp.setLayout(gl);
-        jf.add(jp,BorderLayout.SOUTH);
+        
         jf.setLayout(bl);
+        jp.show();
+        
+        
        
         
     }

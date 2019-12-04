@@ -52,14 +52,13 @@ public class EditarRobots extends AppCompatActivity implements View.OnClickListe
             Log.d("Hola", "onClick: " + alumnoSel);
 
 
-            Bundle pasarAlumno = new Bundle();
-            pasarAlumno.putSerializable("alumno", alumnoSel);
+            Bundle pasarArray = new Bundle();
+            pasarArray.putSerializable("alumno", alumnos);
 
-            //i.putExtra("alumno",nuevoAlumno);
-            Bundle posicioAlumno = new Bundle();
+
 
             Intent i = new Intent();
-            i.putExtras(pasarAlumno);
+            i.putExtras(pasarArray);
             setResult(Activity.RESULT_OK, i);
             finish();
         }
