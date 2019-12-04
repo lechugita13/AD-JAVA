@@ -80,6 +80,7 @@ void MainWindow::slotRepintar(){
 }
 void MainWindow::slotMostrarDialogoInfo(){
 
+    
     DInformacion dialogo(bolas.size(),this->width(),this->height());
     
     dialogo.exec();
