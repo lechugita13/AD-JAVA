@@ -10,9 +10,12 @@ Bola::Bola(float posX,float posY,float velX,float velY,float radio){
     this->velX = velX;
     this->velY = velY;
     this->radio = radio;
+    color =  QColor(rand()%256,rand()%256,rand()%256);
+}
+Bola::Bola(float posX,float posY,float velX,float velY,float radio,QColor color):
+    Bola(posX,posY,velX,velY,radio){
+       this->color = color;
 
-    
-        
 }
 
 void Bola::moverBola(int width,int height){
@@ -38,7 +41,8 @@ void Bola::chocar(Bola *otra){
     Bola * arriba;
     Bola * abajo;
 
-       if (distancia(*otra)>20) return;
+    
+    if (distancia(*otra)>(this->radio + otra->radio)/2) return;
     if (this->posX > otra->posX)
     {
         izquierda = otra;
@@ -49,11 +53,11 @@ void Bola::chocar(Bola *otra){
 
     if (this->posY > otra->posY)
     {
-        arriba = this;
-        abajo = otra;
-    }else{
-         arriba = otra;
+        arriba = otra;
         abajo = this;
+    }else{
+         arriba = this;
+        abajo = otra;
        
     }
     if (izquierda->velX > derecha->velX)
@@ -71,6 +75,7 @@ void Bola::chocar(Bola *otra){
    
 }
 float Bola::distancia(Bola otra){
+
     float x = this->posX - otra.posX;
     float y = this->posY - otra.posY;
      return sqrt(powf(x,2)+powf(y,2));

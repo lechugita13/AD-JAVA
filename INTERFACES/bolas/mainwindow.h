@@ -5,6 +5,8 @@
 #include <QPaintEvent>
 #include "bola.h"
 #include <QVector>
+#include <QAction>
+#include <QMenu>
 #include <QRandomGenerator>
 
 class MainWindow : public QMainWindow {
@@ -19,9 +21,12 @@ public:
        Bola * b;
        QVector<Bola *>bolas;
        QRandomGenerator aleatorizador;
+       QMenu * menuArchivo;
+      QAction * accionInformacion;
+
 public slots:
        void slotRepintar();
-       
+       void slotMostrarDialogoInfo();
 
 };
 #endif 
