@@ -14,13 +14,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-public class Activity_Permisos extends AppCompatActivity implements View.OnClickListener {
+public class Activity_Perm extends AppCompatActivity implements View.OnClickListener {
     private Button botoCrida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permisos);
+
         botoCrida = findViewById(R.id.botoCrida);
         botoCrida.setOnClickListener(this);
     }

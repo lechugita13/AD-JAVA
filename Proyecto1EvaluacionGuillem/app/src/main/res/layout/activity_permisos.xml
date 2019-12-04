@@ -16,23 +16,23 @@
         android:layout_height="wrap_content"
         android:text="@string/textCrida" />
 
-    <Button
-        android:id="@+id/botoFoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/botoFoto" />
+        <Button
+            android:id="@+id/botoFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botoFoto" />
 
-    <Button
-        android:id="@+id/botoWeb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/botoWeb" />
+        <Button
+            android:id="@+id/botoWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botoWeb" />
 
-    <Button
-        android:id="@+id/botoFormulario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/botoFormulari" />
+        <Button
+            android:id="@+id/botoFormulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botoFormulari" />
 
 
-</LinearLayout>
+    </LinearLayout>

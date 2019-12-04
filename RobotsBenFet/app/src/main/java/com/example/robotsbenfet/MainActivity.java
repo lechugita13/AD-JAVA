@@ -83,9 +83,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case ItemTouchHelper.LEFT:
                         Toast.makeText(MainActivity.this, "PACA EL ALTRE COSTAT", Toast.LENGTH_LONG).show();
+                        editarRobots(viewHolder.getAdapterPosition());
                         adaptador.notifyDataSetChanged();
                         break;
                 }
+
+            }
+
+            private void editarRobots(int adapterPosition) {
+
+                Intent intent = new Intent();
+                Bundle pasarPosicio = new Bundle();
+                pasarPosicio.putInt("posicioArray", adapterPosition);
+                intent.putExtra("alumnos", alumnos);
+
+                intent.putExtras(pasarPosicio);
+                startActivityForResult(intent, 2);
 
             }
 
@@ -185,6 +198,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("Hola", "onClick: " + a);
 
                 alumnos.add(a);
+            } catch (NullPointerException e) {
+
+            }
+
+
+        }
+        if (requestCode == 2) {
+
+
+            try {
+
+
+                Alumno a = (Alumno) data.getSerializableExtra("alumno");
+                Log.d("Hola", "onClick: " + a);
+
+
             } catch (NullPointerException e) {
 
             }
