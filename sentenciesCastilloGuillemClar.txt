@@ -10,3 +10,10 @@ select parter_id from purchase_order where invoice_count=0;
 
 select r.name,r.id from res_partner as r where r.is_company='true' AND r.phone='';
 
+A- My problem is that i want to create more space on my smartphone
+B First of all we will delete remove your unused applications
+A How can i do that?
+B You will do a longtab on the app you want to remove and then you will be able to unisnstall this app
+A Okey thanks i remove one app but can you tell me another form to create more space?
+B Of course another form to create more space is saveing your data in the cloud you can find many tutorials on youtube
+A Okey I know how to do it thanks for your help

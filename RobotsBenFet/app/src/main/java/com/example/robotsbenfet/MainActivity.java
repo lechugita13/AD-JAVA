@@ -1,16 +1,12 @@
 package com.example.robotsbenfet;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.content.ComponentCallbacks2;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -18,16 +14,10 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.Toast;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -83,18 +73,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case ItemTouchHelper.LEFT:
                         Toast.makeText(MainActivity.this, "PACA EL ALTRE COSTAT", Toast.LENGTH_LONG).show();
-                        editarRobots(viewHolder.getAdapterPosition());
+                        editarRobots(alumnos.get(viewHolder.getAdapterPosition()));
                         adaptador.notifyDataSetChanged();
                         break;
                 }
 
             }
 
-            private void editarRobots(int adapterPosition) {
+            private void editarRobots(Alumno adapterPosition) {
 
-                Intent intent = new Intent(this,EditarRobots.class);
+                Intent intent = new Intent(MainActivity.this,FormularioRobots.class);
                 Bundle pasarPosicio = new Bundle();
-                pasarPosicio.putInt("posicioArray", adapterPosition);
+
                 pasarPosicio.putSerializable("alumnos", alumnos);
 
                 intent.putExtras(pasarPosicio);
