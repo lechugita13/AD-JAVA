@@ -8,6 +8,7 @@
 #include <QAction>
 #include <QMenu>
 #include <QRandomGenerator>
+#include <QMouseEvent>
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
@@ -19,14 +20,19 @@ public:
        float  velX;
        float velY;
        Bola * b;
+       
+       QMouseEvent * eventoInicial;
+      
        QVector<Bola *>bolas;
        QRandomGenerator aleatorizador;
        QMenu * menuArchivo;
-      QAction * accionInformacion;
-
+       QAction * accionInformacion;
+        void mouseDoubleClickEvent(QMouseEvent *e);
+        void mousePressEvent(QMouseEvent * event);
+       void mouseReleaseEvent(QMouseEvent * event);
 public slots:
        void slotRepintar();
        void slotMostrarDialogoInfo();
-
+     
 };
 #endif 

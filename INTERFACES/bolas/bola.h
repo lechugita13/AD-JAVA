@@ -11,9 +11,10 @@ class Bola {
     float velY;
     QColor color;
     float radio;
+    int vida;
     float distancia(Bola otra);
-    void chocar(Bola *otra);
-
+    bool chocar(Bola *otra);
+    void trompa();
     Bola(float posX,float posY,float velX,float velY,float radio,QColor color);
 
     Bola(float posX,float posY,float velX,float velY,float radio);
