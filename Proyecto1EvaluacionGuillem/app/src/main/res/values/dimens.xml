@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textPrincipalActivity">30dp</dimen>
+    <dimen name="margen">22sp</dimen>
+    <dimen name="textSize">22sp</dimen>
+    <dimen name="tamTitul">45sp</dimen>
+    <dimen name="lateral">75dp</dimen>
 </resources>

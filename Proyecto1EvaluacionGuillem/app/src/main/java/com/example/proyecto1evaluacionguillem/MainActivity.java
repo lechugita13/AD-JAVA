@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("Hola", "usuario "+usuario.getText().toString());
                 Log.d("Hola", "pass "+pass.getText().toString());
                 inputEmail.setError(null);
-                Intent i = new Intent(this, Activity_Perm.class);
+                Intent i = new Intent(this, DisparadorActivitys.class);
 
                 startActivity(i);
                 Log.d("Hola", "estem fora");

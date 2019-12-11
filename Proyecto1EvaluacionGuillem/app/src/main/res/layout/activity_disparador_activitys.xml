@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/nebulosa">
+
+    <TextView
+        android:id="@+id/disparador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DisparadorAtivitys"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="@dimen/margen"
+        android:textColor="@color/colorTituloNuevoRobot"
+        android:textSize="@dimen/tamTitul"
+        android:textStyle="bold" />
+    <Button
+        android:layout_marginTop="200dp"
+        android:id="@+id/recicler"
+        android:text="@string/recicler"
+        android:gravity="center"
+        android:background="@drawable/color_boto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    <Button
+        android:id="@+id/contacto"
+        android:text="@string/contacto"
+        android:gravity="center"
+        android:background="@drawable/color_boto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    <Button
+        android:id="@+id/acercade"
+        android:text="@string/acercade"
+        android:gravity="center"
+        android:background="@drawable/color_boto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    
+</TableLayout>

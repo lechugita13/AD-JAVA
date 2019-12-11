@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Practica5</string>
+    <string name="app_name">Proyecte_1_EvaluacioGuillem</string>
     <string name="Titulo">My Account</string>
     <string name="forgot">He olvidado la contraseña</string>
     <string name="login">login</string>
@@ -8,4 +8,35 @@
     <string name="botoFoto">Permis Foto</string>
     <string name="botoWeb">Permis Web</string>
     <string name="botoFormulari">Accedir AL Formulari</string>
+    <string name="recicler">recicler</string>
+    <string name="contacto">contacto</string>
+    <string name="acercade">acercade</string>
+    <string name="robots">Robots</string>
+    <string name="sinRobots">Todavía no existe ningún robot en el sistema.</string>
+    <string name="imagen_desc">Imagen del robot.</string>
+    <string name="nuevo_robot">Nuevo Robot</string>
+    <string name="nombre">Nombre:</string>
+    <string name="material">Material:</string>
+    <string name="anyo">Año:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="crear_robot">ACEPTAR</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="editar">EDITAR</string>
+    <string name="sexo">Sexo</string>
+    <string name="correoe">correoE</string>
+    <string name="guardar">Guardar</string>
+    <string name="mujer">Mujer</string>
+    <string name="hombre">Hombre</string>
+    <string name="empresa_de_guillem_s_l">Empresa de Guillem S.L</string>
+    <string name="localidad">Xativa</string>
+    <string name="empresa">Empresa:</string>
+    <string name="tel">Tel:</string>
+    <string name="localidad1">Localidad:</string>
+    <string name="numTel">666666666</string>
+
+    <string-array name="tipus">
+        <item>R2D2</item>
+        <item>BENDER</item>
+        <item>WALLE</item>
+    </string-array>
 </resources>

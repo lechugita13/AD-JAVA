@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/nebulosa">
 
     <TextView
         android:id="@+id/textPermisos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:text="@string/textPermisos"
         android:textSize="@dimen/textPrincipalActivity"/>
 
     <Button
+        android:background="@drawable/color_boto"
         android:id="@+id/botoCrida"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/lateral"
+        android:layout_marginTop="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textCrida" />
 
         <Button
+            android:background="@drawable/color_boto"
             android:id="@+id/botoFoto"
-            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/lateral"
+            android:layout_marginTop="@dimen/margen"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/botoFoto" />
 
         <Button
+            android:background="@drawable/color_boto"
             android:id="@+id/botoWeb"
-            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/lateral"
+            android:layout_marginTop="@dimen/margen"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/botoWeb" />
 
-        <Button
-            android:id="@+id/botoFormulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/botoFormulari" />
 
 
     </LinearLayout>

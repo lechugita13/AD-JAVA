@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcercaDe">
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="393dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/acercade"
+        android:textSize="@dimen/margen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nomEmpresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/empresa_de_guillem_s_l"
+        app:layout_constraintStart_toEndOf="@+id/textEmpresa"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/numTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/numTel"
+        app:layout_constraintStart_toEndOf="@+id/numte"
+        app:layout_constraintTop_toBottomOf="@+id/nomEmpresa" />
+
+    <TextView
+        android:id="@+id/localidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/localidad"
+        app:layout_constraintStart_toEndOf="@+id/Localitat"
+        app:layout_constraintTop_toBottomOf="@+id/numTel" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/iconofacebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/iconogoogle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/iconoinsta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textEmpresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/empresa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/numte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/tel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmpresa" />
+
+    <TextView
+        android:id="@+id/Localitat"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/localidad1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numte" />
+
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="142dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/atras"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
