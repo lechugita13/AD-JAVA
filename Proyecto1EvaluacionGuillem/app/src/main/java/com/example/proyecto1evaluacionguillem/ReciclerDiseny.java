@@ -10,13 +10,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,11 +26,11 @@ import java.util.ArrayList;
 
 public class ReciclerDiseny extends AppCompatActivity implements View.OnClickListener {
 
-    ArrayList<Robot> listaRobots = new ArrayList<>();
-    private TextView tvNoHayRobots;
+    ArrayList<Pedido> listaPedidos = new ArrayList<>();
+    private TextView tvNoHayDibujos;
     private RecyclerView recycler;
     private FloatingActionButton botonNuevoRobot;
-    private AdaptadorRobots adaptador;
+    private AdaptadorPedido adaptador;
     private LinearLayoutManager layoutManager;
 
     @Override
@@ -41,14 +39,14 @@ public class ReciclerDiseny extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_recicler_diseny);
 
         recycler = findViewById(R.id.recycler);
-        tvNoHayRobots = findViewById(R.id.tvNoHayRobots);
+        tvNoHayDibujos = findViewById(R.id.tvNoHayDibujos);
         recycler.setVisibility(View.INVISIBLE);
-        tvNoHayRobots.setVisibility(View.VISIBLE);
-        botonNuevoRobot = findViewById(R.id.botonNuevoRobot);
+        tvNoHayDibujos.setVisibility(View.VISIBLE);
+        botonNuevoRobot = findViewById(R.id.botonNuevoDibujo);
 
         botonNuevoRobot.setOnClickListener(this);
 
-        adaptador = new AdaptadorRobots(listaRobots, this);
+        adaptador = new AdaptadorPedido(listaPedidos, this);
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         recycler.setAdapter(adaptador);
@@ -152,34 +150,34 @@ public class ReciclerDiseny extends AppCompatActivity implements View.OnClickLis
 
     private void borrarRobot(@NonNull RecyclerView.ViewHolder viewHolder) {
         try {
-            this.listaRobots.remove(viewHolder.getAdapterPosition());
+            this.listaPedidos.remove(viewHolder.getAdapterPosition());
         } catch (IndexOutOfBoundsException e) {
 
         }
         adaptador.notifyItemRemoved(viewHolder.getAdapterPosition());
 
-        if (this.listaRobots.size() == 0) {
-            this.tvNoHayRobots.setVisibility(View.VISIBLE);
+        if (this.listaPedidos.size() == 0) {
+            this.tvNoHayDibujos.setVisibility(View.VISIBLE);
             this.recycler.setVisibility(View.INVISIBLE);
         }
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.botonNuevoRobot) {
+        if (v.getId() == R.id.botonNuevoDibujo) {
             abrirFormNuevoRobot();
         }
     }
 
     private void abrirFormNuevoRobot() {
-        Intent i = new Intent(this, FormularioRobot.class);
+        Intent i = new Intent(this, FormularioPedido.class);
         startActivityForResult(i, 0);
     }
 
     private void abrirFormEditarRobot(int pos) {
-        Robot r = this.listaRobots.get(pos);
-        Intent i = new Intent(this, FormularioRobot.class);
-        i.putExtra("Robot", r);
+        Pedido r = this.listaPedidos.get(pos);
+        Intent i = new Intent(this, FormularioPedido.class);
+        i.putExtra("Pedido", r);
         i.putExtra("pos", pos);
         startActivityForResult(i, 1);
     }
@@ -187,18 +185,18 @@ public class ReciclerDiseny extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 0 && resultCode == 0) {
-            Robot r;
+            Pedido r;
             try {
-                r = (Robot) data.getSerializableExtra("Robot");
+                r = (Pedido) data.getSerializableExtra("Pedido");
                 anyadirNuevoRobot(r);
             } catch (NullPointerException e) {
                 return;
             }
         } else if (requestCode == 1 && resultCode == 0) {
             try {
-                Robot r = (Robot) data.getSerializableExtra("Robot");
+                Pedido r = (Pedido) data.getSerializableExtra("Pedido");
                 int i = data.getIntExtra("pos", 0);
-                this.listaRobots.set(i, r);
+                this.listaPedidos.set(i, r);
                 adaptador.notifyItemChanged(i);
             } catch (NullPointerException e) {
                 return;
@@ -206,14 +204,14 @@ public class ReciclerDiseny extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void anyadirNuevoRobot(final Robot r) {
+    private void anyadirNuevoRobot(final Pedido r) {
         // añadir robot
-        this.listaRobots.add(0, r);
+        this.listaPedidos.add(0, r);
         recycler.setVisibility(View.VISIBLE);
-        tvNoHayRobots.setVisibility(View.INVISIBLE);
+        tvNoHayDibujos.setVisibility(View.INVISIBLE);
         this.adaptador.notifyItemInserted(0);
 
-        this.tvNoHayRobots.setVisibility(View.INVISIBLE);
+        this.tvNoHayDibujos.setVisibility(View.INVISIBLE);
         this.recycler.setVisibility(View.VISIBLE);
 
         // mostrar SnackBar
@@ -222,7 +220,7 @@ public class ReciclerDiseny extends AppCompatActivity implements View.OnClickLis
         snack.setAction("DESHACER", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listaRobots.remove(r);
+                listaPedidos.remove(r);
                 adaptador.notifyItemRemoved(0);
             }
         });

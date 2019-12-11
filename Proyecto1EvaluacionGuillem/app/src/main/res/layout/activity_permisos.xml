@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nebulosa">
+    android:background="@drawable/cataratas">
 
     <TextView
         android:id="@+id/textPermisos"
@@ -41,6 +41,13 @@
             android:layout_height="wrap_content"
             android:text="@string/botoWeb" />
 
+            <Button
+                android:id="@+id/atras"
+                 android:layout_width="142dp"
+                    android:layout_height="67dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="@dimen/margen"
 
+                  android:background="@drawable/atras" />
 
-    </LinearLayout>
+</LinearLayout>

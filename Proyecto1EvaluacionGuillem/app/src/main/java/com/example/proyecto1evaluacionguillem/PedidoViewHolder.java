@@ -10,46 +10,46 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RobotViewHolder extends RecyclerView.ViewHolder {
+public class PedidoViewHolder extends RecyclerView.ViewHolder {
 
     private Context context;
 
     private ImageView imagen;
     private TextView tvNomRobot;
-    private TextView tvAnyo;
-    private TextView tvMaterial;
+    private TextView tvPuntadas;
+    private TextView tvEmpresa;
 
-    public RobotViewHolder(@NonNull View itemView, Context context) {
+    public PedidoViewHolder(@NonNull View itemView, Context context) {
         super(itemView);
         this.context = context;
 
         this.imagen = itemView.findViewById(R.id.imagen);
         this.tvNomRobot = itemView.findViewById(R.id.tvNomRobot);
-        this.tvAnyo = itemView.findViewById(R.id.tvAnyo);
-        this.tvMaterial = itemView.findViewById(R.id.tvMaterial);
+        this.tvPuntadas = itemView.findViewById(R.id.tvPuntadas);
+        this.tvEmpresa = itemView.findViewById(R.id.tvEmpresa);
     }
 
-    public void bindRobot(Robot r) {
-        Drawable d = this.context.getDrawable(R.drawable.rdosddos);
+    public void bindRobot(Pedido r) {
+        Drawable d = this.context.getDrawable(R.drawable.tajimaicon1);
         switch (r.tipo) {
-            case R2D2: {
-                d = this.context.getDrawable(R.drawable.rdosddos);
+            case TAJIMA: {
+                d = this.context.getDrawable(R.drawable.tajimaicon1);
                 break;
             }
-            case BENDER: {
-                d = this.context.getDrawable(R.drawable.bender);
+            case BARUDAN: {
+                d = this.context.getDrawable(R.drawable.barudanicon);
                 break;
             }
-            case WALLE: {
-                d = this.context.getDrawable(R.drawable.walle);
+            case BROTHER: {
+                d = this.context.getDrawable(R.drawable.brothericon);
                 break;
             }
         }
         this.imagen.setImageDrawable(d);
 
         this.tvNomRobot.setText(r.nombre);
-        this.tvAnyo.setText(String.valueOf(r.anyo));
-        this.tvMaterial.setText(r.material);
+        this.tvPuntadas.setText(String.valueOf(r.puntadas));
+        this.tvEmpresa.setText(r.empresa);
     }
 
 }

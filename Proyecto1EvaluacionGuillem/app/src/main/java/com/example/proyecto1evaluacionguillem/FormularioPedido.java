@@ -10,10 +10,10 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FormularioRobot extends AppCompatActivity implements View.OnClickListener {
+public class FormularioPedido extends AppCompatActivity implements View.OnClickListener {
 
     private EditText entradaNombre;
-    private EditText entradaMaterial;
+    private EditText entradaEmpresa;
     private EditText entradaAnyo;
     private Spinner spinnerTipo;
     private Button btnCrearRobot;
@@ -23,22 +23,22 @@ public class FormularioRobot extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulario_robot);
+        setContentView(R.layout.activity_formulario_pedidos);
 
         entradaNombre = findViewById(R.id.entradaNombre);
-        entradaMaterial = findViewById(R.id.entradaMaterial);
-        entradaAnyo = findViewById(R.id.entradaAnyo);
+        entradaEmpresa = findViewById(R.id.entradaMaterial);
+        entradaAnyo = findViewById(R.id.entradaPuntadas);
         spinnerTipo = findViewById(R.id.spinnerTipo);
-        btnCrearRobot = findViewById(R.id.btnCrearRobot);
+        btnCrearRobot = findViewById(R.id.btnCrearPedido);
 
         Intent i = getIntent();
         try {
-            Robot r = (Robot) i.getSerializableExtra("Robot");
+            Pedido r = (Pedido) i.getSerializableExtra("Pedido");
             pos = i.getIntExtra("pos", 0);
 
             entradaNombre.setText(r.nombre);
-            entradaMaterial.setText(r.material);
-            entradaAnyo.setText(String.valueOf(r.anyo));
+            entradaEmpresa.setText(r.empresa);
+            entradaAnyo.setText(String.valueOf(r.puntadas));
             spinnerTipo.setSelection(r.tipo.ordinal());
         } catch (NullPointerException ex) {
 
@@ -50,13 +50,13 @@ public class FormularioRobot extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         String nombre = entradaNombre.getText().toString();
-        String material = entradaMaterial.getText().toString();
+        String material = entradaEmpresa.getText().toString();
         int anyo = Integer.parseInt(entradaAnyo.getText().toString());
         Tipo t = Tipo.values()[spinnerTipo.getSelectedItemPosition()];
 
-        Robot r = new Robot(nombre, material, anyo, t);
+        Pedido r = new Pedido(nombre, material, anyo, t);
         Intent i = new Intent();
-        i.putExtra("Robot", r);
+        i.putExtra("Pedido", r);
         i.putExtra("pos", pos);
         setResult(0, i);
         finish();

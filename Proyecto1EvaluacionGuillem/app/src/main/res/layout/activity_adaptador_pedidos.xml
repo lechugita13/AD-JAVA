@@ -35,7 +35,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvAnyo"
+                android:id="@+id/tvPuntadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -47,7 +47,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvMaterial"
+            android:id="@+id/tvEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp" />

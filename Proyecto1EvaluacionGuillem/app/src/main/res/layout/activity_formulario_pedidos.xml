@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FormularioRobot">
+    tools:context=".FormularioPedido">
 
     <TextView
-        android:id="@+id/tvNuevoRobot"
+        android:id="@+id/tvNuevoDibujo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="25dp"
-        android:text="@string/nuevo_robot"
+        android:text="@string/nuevo_dibujo"
         android:textAlignment="viewStart"
         android:textColor="@color/colorTituloNuevoRobot"
         android:textSize="50sp"
@@ -35,6 +35,7 @@
             android:maxLines="1"
             android:text="@string/nombre" />
 
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilNombre"
             android:layout_width="match_parent"
@@ -55,12 +56,12 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvMaterial"
+            android:id="@+id/tvEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="@string/material" />
+            android:text="@string/empresa" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilMaterial"
@@ -72,7 +73,7 @@
                 android:id="@+id/entradaMaterial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/material" />
+                android:hint="@string/empresa" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -82,24 +83,24 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tvAnyo"
+            android:id="@+id/tvPuntadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="@string/anyo" />
+            android:text="@string/puntadas" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilAnyo"
+            android:id="@+id/tilPuntadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/entradaAnyo"
+                android:id="@+id/entradaPuntadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/anyo"
+                android:hint="@string/puntadas"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -127,10 +128,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnCrearRobot"
+        android:id="@+id/btnCrearPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="@drawable/selector_boto"
-        android:text="@string/crear_robot" />
+        android:text="@string/crear_dibujo" />
 </LinearLayout>

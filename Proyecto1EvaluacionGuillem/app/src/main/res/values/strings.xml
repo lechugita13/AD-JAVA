@@ -1,42 +1,42 @@
 <resources>
     <string name="app_name">Proyecte_1_EvaluacioGuillem</string>
-    <string name="Titulo">My Account</string>
+    <string name="Titulo">Mi cuenta</string>
     <string name="forgot">He olvidado la contraseña</string>
     <string name="login">login</string>
-    <string name="textPermisos">Activity dels permisos</string>
+    <string name="textPermisos" translatable="false">Activity dels permisos</string>
     <string name="textCrida">Permis Crida</string>
     <string name="botoFoto">Permis Foto</string>
     <string name="botoWeb">Permis Web</string>
     <string name="botoFormulari">Accedir AL Formulari</string>
-    <string name="recicler">recicler</string>
+    <string name="recicler" translatable="false">recicler</string>
     <string name="contacto">contacto</string>
     <string name="acercade">acercade</string>
-    <string name="robots">Robots</string>
-    <string name="sinRobots">Todavía no existe ningún robot en el sistema.</string>
-    <string name="imagen_desc">Imagen del robot.</string>
-    <string name="nuevo_robot">Nuevo Robot</string>
+    <string name="dibujos">Dibujos</string>
+    <string name="sinDibujo">Todavía no existe ningún dibujo en el sistema.</string>
+    <string name="imagen_desc">Imagen del Dibujo.</string>
+    <string name="nuevo_dibujo">Nuevo Dibujo</string>
     <string name="nombre">Nombre:</string>
-    <string name="material">Material:</string>
-    <string name="anyo">Año:</string>
+    <string name="puntadas">Puntadas:</string>
     <string name="tipo">Tipo:</string>
-    <string name="crear_robot">ACEPTAR</string>
+    <string name="crear_dibujo">ACEPTAR</string>
     <string name="eliminar">ELIMINAR</string>
     <string name="editar">EDITAR</string>
     <string name="sexo">Sexo</string>
-    <string name="correoe">correoE</string>
+    <string name="correoElec">correoE</string>
     <string name="guardar">Guardar</string>
     <string name="mujer">Mujer</string>
     <string name="hombre">Hombre</string>
-    <string name="empresa_de_guillem_s_l">Empresa de Guillem S.L</string>
-    <string name="localidad">Xativa</string>
+    <string name="empresa_de_guillem_s_l" translatable="false">Empresa de Guillem S.L</string>
+    <string name="localidad" translatable="false">Xativa</string>
     <string name="empresa">Empresa:</string>
-    <string name="tel">Tel:</string>
+    <string name="tel" translatable="false">Tel:</string>
     <string name="localidad1">Localidad:</string>
-    <string name="numTel">666666666</string>
+    <string name="numTel" translatable="false">666666666</string>
+    <string name="permisos">permisos</string>
 
     <string-array name="tipus">
-        <item>R2D2</item>
-        <item>BENDER</item>
-        <item>WALLE</item>
+        <item>TAJIMA</item>
+        <item>BARUDAN</item>
+        <item>BROTHER</item>
     </string-array>
 </resources>

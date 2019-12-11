@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Proyecte_1_EvaluacioGuillem</string>
+    <string name="Titulo">My account</string>
+    <string name="acercade">About us</string>
+    <string name="botoFormulari">Acces the form</string>
+    <string name="botoFoto">photo permit</string>
+    <string name="botoWeb">web permit</string>
+    <string name="contacto">contact</string>
+    <string name="correoElec">email</string>
+    <string name="crear_dibujo">ACEPT</string>
+    <string name="dibujos">Draws</string>
+    <string name="editar">EDIT</string>
+    <string name="eliminar">DELETE</string>
+    <string name="empresa">Company:</string>
+    <string name="forgot">Forgott password</string>
+    <string name="guardar">Save</string>
+    <string name="hombre">Man</string>
+    <string name="imagen_desc">Drawing Picture</string>
+    <string name="localidad1">City:</string>
+    <string name="login">login</string>
+    <string name="mujer">Women</string>
+    <string name="nombre">Name:</string>
+    <string name="nuevo_dibujo">New Draw</string>
+    <string name="permisos">permit</string>
+    <string name="puntadas">Stitches</string>
+    <string name="sexo">Sex</string>
+    <string name="sinDibujo">There is still no drawing in the system.</string>
+    <string name="textCrida">permission called</string>
+    <string name="tipo">Type:</string>
+</resources>

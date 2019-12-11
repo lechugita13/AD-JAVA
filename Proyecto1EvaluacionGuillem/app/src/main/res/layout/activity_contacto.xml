@@ -19,7 +19,7 @@
         android:width="200dp">
     </EditText>
     <TextView
-        android:text="@string/correoe"
+        android:text="@string/correoElec"
         android:textSize="@dimen/margen">
 
     </TextView>

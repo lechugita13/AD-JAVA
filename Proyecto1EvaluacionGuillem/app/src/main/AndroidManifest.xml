@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AcercaDe"></activity>
         <activity android:name=".Contacto" />
-        <activity android:name=".AdaptadorRobots" />
-        <activity android:name=".FormularioRobot" />
+        <activity android:name=".AdaptadorPedido" />
+        <activity android:name=".FormularioPedido" />
         <activity android:name=".ReciclerDiseny" />
         <activity android:name=".DisparadorActivitys" />
         <activity android:name=".Activity_Perm" />
@@ -25,6 +25,8 @@
         </activity>
     </application>
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>
