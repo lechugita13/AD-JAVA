@@ -17,3 +17,236 @@ B You will do a longtab on the app you want to remove and then you will be able 
 A Okey thanks i remove one app but can you tell me another form to create more space?
 B Of course another form to create more space is saveing your data in the cloud you can find many tutorials on youtube
 A Okey I know how to do it thanks for your help
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="game.player_form">
+            <field name="name">player form</field>
+            <field name="model">game.player</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <field name="name"/>
+                    <field name="planetes"/>
+                </form>
+            </field>
+
+        </record>
+
+
+        <record model="ir.ui.view" id="game.player_list">
+            <field name="name">player list</field>
+            <field name="model">game.player</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="probaKanban" mode="kanban"/>
+                    <field name="name"/>
+
+
+                </tree>
+            </field>
+
+        </record>
+
+        <record model="ir.ui.view" id="game.planetes_kanban">
+            <field name="name">Kanban</field>
+            <field name="model">game.planets</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <!--list of field to be loaded -->
+                    <field name="name"/>
+                    <field name="id"/> <!-- És important afegir el id per al record.id.value -->
+                    <field name="resources"/>
+
+
+                    <templates>
+                        <t t-name="kanban-box">
+
+                            <div class="oe_kanban_card">
+
+                                <ul>
+
+                                    <li>Recursos:
+
+                                        <a type="open">
+                                            <field name="name"/>
+                                        </a>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="game.player_action_window">
+            <field name="name">Players</field>
+            <field name="res_model">game.player</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="game.planets_list">
+            <field name="name">planets list</field>
+            <field name="model">game.planets</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="name"/>
+                    <field name="player"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="game.planets_form">
+            <field name="name">planets form</field>
+            <field name="model">game.planets</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+
+                            <field name="name"/>
+                            <field name="player"/>
+                            <field name="resources"/>
+                            <field name="image" widget="image" alt="Es una foto"/>
+                        </group>
+                        <notebook>
+                            <page string="Recursos">
+                                <field name="recursosKanban">
+                                    <kanban>
+                                        <!--list of field to be loaded -->
+                                        <field name="name"/>
+                                        <field name="id"/> <!-- És important afegir el id per al record.id.value -->
+
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div t-attf-class="oe_kanban_card oe_kanban_global_click"
+                                                     style="-webkit-box-flex: 0; flex: none; width: 100px; min-width:100px; margin: 0px; border: none;">
+                                                    <a type="open">
+
+                                                    </a>
+                                                    <div class="oe_product_desc">
+                                                        <a type="open">
+                                                            <field name="name"></field>
+                                                            <field name="cantidad"/>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+
+
+                            </page>
+                            <page string="Recurs">
+
+                                <field name="resources" mode="kanban">
+
+                                </field>
+                            </page>
+                            <page string="Flota">
+
+                                <field name="flota" mode="kanban">
+
+
+                                </field>
+
+                                <button name="create_new_low_fleet" type="object" string="Comprar Nave Ligera"
+                                        class="oe_highlight"/>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="game.resource_list">
+            <field name="name">resource list</field>
+            <field name="model">game.resource</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="name"/>
+                    <field name="cantidad"/>
+                    <field name="planetsR"/>
+                    <field name="recurso"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="game.recurs_form">
+            <field name="name">Recurs</field>
+            <field name="model">game.recurs</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <field name="name"/>
+                    <field name="image" widget="image" alt="imagen"/>
+                </form>
+            </field>
+
+        </record>
+
+
+        <record model="ir.actions.act_window" id="game.planets_action_window">
+            <field name="name">PLANETS</field>
+            <field name="res_model">game.planets</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="game.fleet_action_window">
+            <field name="name">FLEET</field>
+            <field name="res_model">game.fleet</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="game.resource_action_window">
+            <field name="name">Resource</field>
+            <field name="res_model">game.resource</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="game.recurs_action_window">
+            <field name="name">Recurs</field>
+            <field name="res_model">game.recurs</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.actions.act_window" id="game.mines_action_window">
+            <field name="name">Mines</field>
+            <field name="res_model">game.mines</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Game" id="game.menu_root"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="Dios y Creador" id="game.menu_1" parent="game.menu_root"/>
+
+        <!-- actions -->
+
+        <menuitem name="Players" id="game.menu_1_list" parent="game.menu_1"
+                  action="game.player_action_window"/>
+        <menuitem name="Planets" id="game.menu_2_list" parent="game.menu_1"
+                  action="game.planets_action_window"/>
+        <menuitem name="Fleet" id="game.menu_3_list" parent="game.menu_1"
+                  action="game.fleet_action_window"/>
+        <menuitem name="Resource" id="game.menu_4_list" parent="game.menu_1"
+                  action="game.resource_action_window"/>
+        <menuitem name="Recurs" id="game.menu_5_list" parent="game.menu_1"
+                  action="game.recurs_action_window"/>
+        <menuitem name="Mines" id="game.menu_6_list" parent="game.menu_1"
+                  action="game.mines_action_window"/>
+    </data>
+</odoo>
