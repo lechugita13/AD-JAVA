@@ -25,14 +25,20 @@ public:
       
        QVector<Bola *>bolas;
        QRandomGenerator aleatorizador;
+            
+
        QMenu * menuArchivo;
        QAction * accionInformacion;
+       QAction * accionTabBolas;
         void mouseDoubleClickEvent(QMouseEvent *e);
         void mousePressEvent(QMouseEvent * event);
        void mouseReleaseEvent(QMouseEvent * event);
+       
 public slots:
+
        void slotRepintar();
        void slotMostrarDialogoInfo();
+       void slotMostrarDControlBolas();
      
 };
 #endif 

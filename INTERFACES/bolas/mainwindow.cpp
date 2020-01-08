@@ -5,7 +5,7 @@
 #include <math.h>
 #include "mainwindow.h"
 #include "DInformacion.h"
-
+#include "DControlBolas.h"
 
 MainWindow::MainWindow(
         QWidget * parent ,
@@ -17,16 +17,21 @@ MainWindow::MainWindow(
             temporizador->start();
             QMenuBar  *barra = this->menuBar();
              menuArchivo = menuBar()->addMenu("Archivo");
+         
+
             barra->addMenu(menuArchivo);
-
+          
            
+       
             accionInformacion = new QAction("ver Info",this);
+            accionTabBolas = new QAction("Tab Bolas",this);
             menuArchivo->addAction(accionInformacion);
-
+            menuArchivo ->addAction(accionTabBolas);
             /*arrancare el temporizador*/
-            connect(temporizador,SIGNAL(timeout()),this,SLOT(slotRepintar()));
-             connect(accionInformacion,SIGNAL(triggered()),this,SLOT(slotMostrarDialogoInfo()));
 
+            connect(temporizador,SIGNAL(timeout()),this,SLOT(slotRepintar()));
+            connect(accionInformacion,SIGNAL(triggered()),this,SLOT(slotMostrarDialogoInfo()));
+            connect(accionTabBolas,SIGNAL(triggered()),this,SLOT(slotMostrarDControlBolas()));
             resize(800,600);
 
           
@@ -107,6 +112,15 @@ void MainWindow::slotMostrarDialogoInfo(){
     DInformacion dialogo(bolas.size(),this->width(),this->height());
     
     dialogo.exec();
+
+}
+
+void MainWindow::slotMostrarDControlBolas(){
+
+    DControlBolas *dialog= new DControlBolas(bolas);
+
+    dialog->show();
+    
 
 }
 
