@@ -44,7 +44,7 @@ MainWindow::MainWindow(
             float radio1 = aleatorizador.bounded(10,60);
             
 
-            bolas.append(new BolaYWidget(posX1,posY1,velX1,velY1,50));
+            bolas.append(new Bola(posX1,posY1,velX1,velY1,50));
         }
         
 
@@ -132,7 +132,7 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *e){
     mouseY =  e->y() - radio/2;
 
 
-    BolaYWidget * nueva = new BolaYWidget(mouseX,mouseY,(rand()%100-50)/50.1,(rand()%100-50)/50.1,50);
+    Bola * nueva = new Bola(mouseX,mouseY,(rand()%100-50)/50.1,(rand()%100-50)/50.1,50);
     bolas.append(nueva);
 
 }
@@ -145,7 +145,7 @@ void MainWindow:: mousePressEvent(QMouseEvent * event){
 void MainWindow::mouseReleaseEvent(QMouseEvent * event){
     if (eventoInicial == NULL ) return;
       int radio=40;
-    bolas.append(new BolaYWidget((float)eventoInicial->x() - radio/2,
+    bolas.append(new Bola((float)eventoInicial->x() - radio/2,
                 (float)eventoInicial->y() - radio/2,
                 ( (float)event->x() - eventoInicial->x() ) / 50.2,
                 ( (float)event->y() - eventoInicial->y() ) / 50.3,40));

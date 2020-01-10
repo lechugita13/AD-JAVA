@@ -53,24 +53,20 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = bola.cpp \
-		BolaYWidget.cpp \
 		DControlBolas.cpp \
 		DInformacion.cpp \
 		main.cpp \
 		mainwindow.cpp \
-		WidgetBola.cpp moc_BolaYWidget.cpp \
-		moc_DControlBolas.cpp \
+		WidgetBola.cpp moc_DControlBolas.cpp \
 		moc_DInformacion.cpp \
 		moc_mainwindow.cpp \
 		moc_WidgetBola.cpp
 OBJECTS       = bola.o \
-		BolaYWidget.o \
 		DControlBolas.o \
 		DInformacion.o \
 		main.o \
 		mainwindow.o \
 		WidgetBola.o \
-		moc_BolaYWidget.o \
 		moc_DControlBolas.o \
 		moc_DInformacion.o \
 		moc_mainwindow.o \
@@ -155,12 +151,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		bolas.pro bola.h \
-		BolaYWidget.h \
 		DControlBolas.h \
 		DInformacion.h \
 		mainwindow.h \
 		WidgetBola.h bola.cpp \
-		BolaYWidget.cpp \
 		DControlBolas.cpp \
 		DInformacion.cpp \
 		main.cpp \
@@ -359,8 +353,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents bola.h BolaYWidget.h DControlBolas.h DInformacion.h mainwindow.h WidgetBola.h $(DISTDIR)/
-	$(COPY_FILE) --parents bola.cpp BolaYWidget.cpp DControlBolas.cpp DInformacion.cpp main.cpp mainwindow.cpp WidgetBola.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents bola.h DControlBolas.h DInformacion.h mainwindow.h WidgetBola.h $(DISTDIR)/
+	$(COPY_FILE) --parents bola.cpp DControlBolas.cpp DInformacion.cpp main.cpp mainwindow.cpp WidgetBola.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents DControlBolas.ui DInformacion.ui WidgetBola.ui $(DISTDIR)/
 
 
@@ -392,23 +386,12 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_BolaYWidget.cpp moc_DControlBolas.cpp moc_DInformacion.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
+compiler_moc_header_make_all: moc_DControlBolas.cpp moc_DInformacion.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_BolaYWidget.cpp moc_DControlBolas.cpp moc_DInformacion.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
-moc_BolaYWidget.cpp: BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h \
-		bola.h \
-		moc_predefs.h \
-		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/bolas/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include BolaYWidget.h -o moc_BolaYWidget.cpp
-
+	-$(DEL_FILE) moc_DControlBolas.cpp moc_DInformacion.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
 moc_DControlBolas.cpp: DControlBolas.h \
 		ui_DControlBolas.h \
 		bola.h \
-		BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/bolas/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include DControlBolas.h -o moc_DControlBolas.cpp
@@ -421,9 +404,6 @@ moc_DInformacion.cpp: DInformacion.h \
 
 moc_mainwindow.cpp: mainwindow.h \
 		bola.h \
-		BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/bolas/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/home/vesprada/AD_JAVA/repo/INTERFACES/bolas -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
@@ -467,16 +447,9 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 bola.o: bola.cpp bola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bola.o bola.cpp
 
-BolaYWidget.o: BolaYWidget.cpp BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h \
-		bola.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o BolaYWidget.o BolaYWidget.cpp
-
 DControlBolas.o: DControlBolas.cpp DControlBolas.h \
 		ui_DControlBolas.h \
 		bola.h \
-		BolaYWidget.h \
 		WidgetBola.h \
 		ui_WidgetBola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DControlBolas.o DControlBolas.cpp
@@ -486,17 +459,11 @@ DInformacion.o: DInformacion.cpp DInformacion.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DInformacion.o DInformacion.cpp
 
 main.o: main.cpp mainwindow.h \
-		bola.h \
-		BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h
+		bola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
 		bola.h \
-		BolaYWidget.h \
-		WidgetBola.h \
-		ui_WidgetBola.h \
 		DInformacion.h \
 		ui_DInformacion.h \
 		DControlBolas.h \
@@ -507,9 +474,6 @@ WidgetBola.o: WidgetBola.cpp WidgetBola.h \
 		ui_WidgetBola.h \
 		bola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o WidgetBola.o WidgetBola.cpp
-
-moc_BolaYWidget.o: moc_BolaYWidget.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_BolaYWidget.o moc_BolaYWidget.cpp
 
 moc_DControlBolas.o: moc_DControlBolas.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_DControlBolas.o moc_DControlBolas.cpp

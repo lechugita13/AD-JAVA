@@ -13,7 +13,7 @@ public:
     
 public slots:
     void slotPararBola();
-    void cambiarColor();
+   
 };
 
 #endif  //DINFORMACION_H

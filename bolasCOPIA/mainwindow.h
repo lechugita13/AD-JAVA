@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QPaintEvent>
 #include "bola.h"
-#include "BolaYWidget.h"
 #include <QVector>
 #include <QAction>
 #include <QMenu>
@@ -20,11 +19,11 @@ public:
        float  posY;
        float  velX;
        float velY;
-       BolaYWidget * b;
+       Bola * b;
        
        QMouseEvent * eventoInicial;
       
-       QVector<BolaYWidget *>bolas;
+       QVector<Bola *>bolas;
        QRandomGenerator aleatorizador;
             
 

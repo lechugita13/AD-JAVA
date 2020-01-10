@@ -4,17 +4,16 @@
 #include <QDialog>
 #include "ui_DControlBolas.h"
 #include "bola.h"
-#include "BolaYWidget.h"
 
 class DControlBolas : public QDialog,  public Ui::DControlBolas {
 Q_OBJECT
 public:
 
-    DControlBolas(QVector<BolaYWidget *> bolas,QWidget *parent=0);
-    QVector<BolaYWidget *> bolasGastar;
+    DControlBolas(QVector<Bola *> bolas,QWidget *parent=0);
+    QVector<Bola *> bolasGastar;
         
 public slots:
-    void stopAll();
+     void slotCambiarColorSel();
 };
 
 #endif  //DINFORMACION_H

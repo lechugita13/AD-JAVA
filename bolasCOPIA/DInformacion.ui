@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>DControlBolas</class>
- <widget class="QDialog" name="DControlBolas">
+ <class>DInformacion</class>
+ <widget class="QDialog" name="DInformacion">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,37 +29,56 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QTabWidget" name="tabBolas">
+  <widget class="QLabel" name="NumBolas">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>331</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>Tab 1</string>
-    </attribute>
-   </widget>
-   <widget class="QWidget" name="tab_2">
-    <attribute name="title">
-     <string>Tab 2</string>
-    </attribute>
-   </widget>
-  </widget>
-  <widget class="QPushButton" name="pararTodas">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>240</y>
-     <width>89</width>
-     <height>25</height>
+     <x>60</x>
+     <y>70</y>
+     <width>121</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Stop ALL</string>
+    <string>Numero de bolas</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="TamFinestra">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tamaño finestra</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="NumBolasModificar">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>67</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ResolucionPantalla">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>130</y>
+     <width>67</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>800x600</string>
    </property>
   </widget>
  </widget>
@@ -68,7 +87,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>DControlBolas</receiver>
+   <receiver>DInformacion</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -84,7 +103,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>DControlBolas</receiver>
+   <receiver>DInformacion</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

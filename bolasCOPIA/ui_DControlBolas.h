@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
 
@@ -26,7 +25,6 @@ public:
     QTabWidget *tabBolas;
     QWidget *tab;
     QWidget *tab_2;
-    QPushButton *pararTodas;
 
     void setupUi(QDialog *DControlBolas)
     {
@@ -47,9 +45,6 @@ public:
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         tabBolas->addTab(tab_2, QString());
-        pararTodas = new QPushButton(DControlBolas);
-        pararTodas->setObjectName(QString::fromUtf8("pararTodas"));
-        pararTodas->setGeometry(QRect(50, 240, 89, 25));
 
         retranslateUi(DControlBolas);
         QObject::connect(buttonBox, SIGNAL(accepted()), DControlBolas, SLOT(accept()));
@@ -63,7 +58,6 @@ public:
         DControlBolas->setWindowTitle(QApplication::translate("DControlBolas", "Dialog", nullptr));
         tabBolas->setTabText(tabBolas->indexOf(tab), QApplication::translate("DControlBolas", "Tab 1", nullptr));
         tabBolas->setTabText(tabBolas->indexOf(tab_2), QApplication::translate("DControlBolas", "Tab 2", nullptr));
-        pararTodas->setText(QApplication::translate("DControlBolas", "Stop ALL", nullptr));
     } // retranslateUi
 
 };
