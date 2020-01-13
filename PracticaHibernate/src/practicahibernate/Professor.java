@@ -6,21 +6,32 @@
 package practicahibernate;
 
 import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  *
  * @author vesprada
  */
-public class Profesor implements Serializable{
-    
-    private int id;
-    private String nombre,ape1,ape2;
-    
+@Entity
+@Table(name = "profesor")
+public class Professor implements Serializable {
 
-    public Profesor() {
+    @Id
+    @Column(name = "id")
+    private int id;
+    @Column(name = "nombre")
+
+    private String nombre;
+     @Column(name = "ape1")
+    private String ape1;
+    @Column(name = "ape2")
+
+    private String ape2;
+
+    public Professor() {
     }
 
-    public Profesor(int id, String nombre, String ape1, String ape2) {
+    public Professor(int id, String nombre, String ape1, String ape2) {
         this.id = id;
         this.nombre = nombre;
         this.ape1 = ape1;
@@ -58,5 +69,4 @@ public class Profesor implements Serializable{
     public void setApe2(String ape2) {
         this.ape2 = ape2;
     }
-    
 }

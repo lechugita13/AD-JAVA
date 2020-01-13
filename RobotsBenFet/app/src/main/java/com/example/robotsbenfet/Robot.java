@@ -2,13 +2,13 @@ package com.example.robotsbenfet;
 
 import java.io.Serializable;
 
-public class Alumno implements Serializable{
+public class Robot implements Serializable{
 
     private String dni;
     private String nombre;
     private char sexo;
 
-    public Alumno(String dni, String nombre, char sexo) {
+    public Robot(String dni, String nombre, char sexo) {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;

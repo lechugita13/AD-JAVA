@@ -10,38 +10,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdaptadorAlumnos extends RecyclerView.Adapter<AlumnosViewHolder> implements View.OnClickListener {
+public class AdaptadorRobots extends RecyclerView.Adapter<RobotsViewHolder> implements View.OnClickListener {
 
 
-    private ArrayList<Alumno> alumnos;
+    private ArrayList<Robot> robots;
     private Context context;
     private View.OnClickListener mListener;
 
-    public AdaptadorAlumnos(ArrayList<Alumno> alumnos, Context context) {
-        this.alumnos = alumnos;
+    public AdaptadorRobots(ArrayList<Robot> robots, Context context) {
+        this.robots = robots;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public AlumnosViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+    public RobotsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.elemento_lista, viewGroup, false);
-        AlumnosViewHolder viewHolder = new AlumnosViewHolder(itemView, context);
+        RobotsViewHolder viewHolder = new RobotsViewHolder(itemView, context);
         itemView.setOnClickListener(this);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AlumnosViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull RobotsViewHolder viewHolder, int position) {
 
-        Alumno alumno = alumnos.get(position);
-        viewHolder.bindAlumno(alumno);
+        Robot robot = robots.get(position);
+        viewHolder.bindAlumno(robot);
     }
 
     @Override
     public int getItemCount() {
-        return alumnos.size();
+        return robots.size();
     }
 
     public void setOnClickListener(View.OnClickListener listener) {

@@ -1,7 +1,6 @@
 package com.example.robotsbenfet;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AlumnosViewHolder extends RecyclerView.ViewHolder {
+public class RobotsViewHolder extends RecyclerView.ViewHolder {
 
 
     private ImageView imgSexo;
@@ -17,7 +16,7 @@ public class AlumnosViewHolder extends RecyclerView.ViewHolder {
     private TextView tvDni;
     private Context contexto;
 
-    public AlumnosViewHolder(@NonNull View itemView, Context context) {
+    public RobotsViewHolder(@NonNull View itemView, Context context) {
         super(itemView);
         imgSexo = itemView.findViewById(R.id.img_sexo);
         tvNombre = itemView.findViewById(R.id.tv_nombre);
@@ -27,12 +26,12 @@ public class AlumnosViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindAlumno(Alumno a) {
+    public void bindAlumno(Robot a) {
         if (a.getSexo() == 'H') {
-            imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.ic_launcher_background));
+            imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.bender));
 
         } else {
-            imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.ic_launcher_foreground));
+            imgSexo.setImageDrawable(contexto.getDrawable(R.drawable.walle));
         }
 
         tvNombre.setText(a.getNombre());

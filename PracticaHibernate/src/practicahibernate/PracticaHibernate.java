@@ -28,13 +28,13 @@ public class PracticaHibernate {
         configuration.configure();
         ServiceRegistry sr = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
         sf = configuration.buildSessionFactory(sr);
-        Profesor p1 = new Profesor(1, "Guillem", "Clar", "Torres");
+        Professor p1 = new Professor(9, "Guillem", "Clar", "Torres");
         Session session = sf.openSession();
         session.beginTransaction();
         session.save(p1);
         session.getTransaction().commit();
         
-        Profesor p2 = (Profesor) session.get(Profesor.class,1001);
+        Professor p2 = (Professor) session.get(Professor.class,1001);
         session.close();
         
     }

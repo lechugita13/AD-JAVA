@@ -2,7 +2,6 @@ package com.example.robotsbenfet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +18,7 @@ public class EditarRobots extends AppCompatActivity implements View.OnClickListe
     private EditText nombre;
     private RadioButton sexo;
     private Button editar;
+    private int pos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class EditarRobots extends AppCompatActivity implements View.OnClickListe
         nombre = findViewById(R.id.et_nombre);
         sexo = findViewById(R.id.sex_hombre);
         editar = findViewById(R.id.editarbtn);
+        getSupportActionBar().setTitle("Edicion un robot");
 
         editar.setOnClickListener(this);
 
@@ -35,31 +36,42 @@ public class EditarRobots extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Metemos en el bundle lo que queremos conservar
+        outState.putString("dni",dni.toString());
+        outState.putString("nombre",nombre.toString());
+
+
+    }
+    @Override
     public void onClick(View view) {
 
         if (view.getId() == R.id.btn_insertar) {
             char sexo1 = (sexo.isChecked()) ? 'H' : 'M';
-            ArrayList<Alumno> alumnos = (ArrayList<Alumno>) getIntent().getSerializableExtra("alumnos");
+            ArrayList<Robot> robots = (ArrayList<Robot>) getIntent().getSerializableExtra("robots");
 
-            Alumno alumnoSel=alumnos.get(getIntent().getIntExtra("posicioArray",2));
+            Robot robotSel = robots.get(getIntent().getIntExtra("posicioArray",2));
 
-            alumnoSel.setDni(dni.getText().toString());
-            alumnoSel.setNombre(nombre.getText().toString());
-            alumnoSel.setSexo(sexo1);
+            robotSel.setDni(dni.getText().toString());
+            robotSel.setNombre(nombre.getText().toString());
+            robotSel.setSexo(sexo1);
 
 
 
-            Log.d("Hola", "onClick: " + alumnoSel);
+            Log.d("Hola", "onClick: " + robotSel);
 
 
             Bundle pasarArray = new Bundle();
-            pasarArray.putSerializable("alumno", alumnos);
+            pasarArray.putSerializable("alumno", robots);
 
 
 
             Intent i = new Intent();
-            i.putExtras(pasarArray);
-            setResult(Activity.RESULT_OK, i);
+            i.putExtra("Robot", robotSel);
+            i.putExtra("pos",pos);
+            setResult(0, i);
             finish();
         }
     }

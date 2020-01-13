@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -15,26 +16,29 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button botoCrear;
     private RecyclerView recyclerView;
-    private AdaptadorAlumnos adaptador;
+    private AdaptadorRobots adaptador;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Alumno> alumnos;
+    private ArrayList<Robot> robots;
     private SwipeRefreshLayout swipeRefreshLayout;
 
 
     public void cargarDatos() {
 
-        alumnos.clear();
+        robots.clear();
         for (int i = 1; i < 10; i++) {
-            alumnos.add(new Alumno("1234567" + i, "Nombre" + i, (i % 2 == 0) ? 'H' : 'M'));
+            robots.add(new Robot("1234567" + i, "Nombre" + i, (i % 2 == 0) ? 'H' : 'M'));
 
         }
         swipeRefreshLayout.setRefreshing(false);
@@ -45,17 +49,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        alumnos = new ArrayList<>();
+        robots = new ArrayList<>();
 
         botoCrear = findViewById(R.id.botoCrear);
         recyclerView = (RecyclerView) findViewById(R.id.rv_alumnos);
-        adaptador = new AdaptadorAlumnos(alumnos, this);
+        adaptador = new AdaptadorRobots(robots, this);
         recyclerView.setAdapter(adaptador);
         adaptador.setOnClickListener(this);
         botoCrear.setOnClickListener(this);
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
+        getSupportActionBar().setTitle("Listado de robots");
 
         ItemTouchHelper.SimpleCallback myCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
             @Override
@@ -68,29 +72,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 switch (direction) {
                     case ItemTouchHelper.RIGHT:
-                        alumnos.remove(viewHolder.getAdapterPosition());
+                        robots.remove(viewHolder.getAdapterPosition());
                         adaptador.notifyItemRemoved(viewHolder.getAdapterPosition());
                         break;
                     case ItemTouchHelper.LEFT:
                         Toast.makeText(MainActivity.this, "PACA EL ALTRE COSTAT", Toast.LENGTH_LONG).show();
-                        editarRobots(alumnos.get(viewHolder.getAdapterPosition()));
+                        editarRobots(robots.get(viewHolder.getAdapterPosition()));
                         adaptador.notifyDataSetChanged();
                         break;
                 }
 
             }
 
-            private void editarRobots(Alumno adapterPosition) {
+            private void editarRobots(Robot adapterPosition) {
 
-                Intent intent = new Intent(MainActivity.this,FormularioRobots.class);
+                Intent intent = new Intent(MainActivity.this, EditarRobots.class);
                 Bundle pasarPosicio = new Bundle();
 
-                pasarPosicio.putSerializable("alumnos", alumnos);
+                pasarPosicio.putSerializable("robots", robots);
 
                 intent.putExtras(pasarPosicio);
                 startActivityForResult(intent, 2);
 
             }
+
 
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
@@ -176,6 +181,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_lista_robots, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.addRobot:
+                Intent i = new Intent(this, FormularioRobots.class);
+                startActivityForResult(i, 1);
+                break;
+
+            case R.id.reiniciar:
+                robots.clear();
+                swipeRefreshLayout.setRefreshing(false);
+                adaptador.notifyDataSetChanged();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
+
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
@@ -184,10 +216,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             try {
 
 
-                Alumno a = (Alumno) data.getSerializableExtra("alumno");
+                Robot a = (Robot) data.getSerializableExtra("alumno");
                 Log.d("Hola", "onClick: " + a);
 
-                alumnos.add(a);
+                robots.add(a);
             } catch (NullPointerException e) {
 
             }
@@ -200,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             try {
 
 
-                Alumno a = (Alumno) data.getSerializableExtra("alumno");
+                Robot a = (Robot) data.getSerializableExtra("alumno");
                 Log.d("Hola", "onClick: " + a);
 
 
