@@ -5,38 +5,32 @@
 #include <math.h>
 #include "mainwindow.h"
 #include "DInformacion.h"
-#include "DControlBolas.h"
-#include <QMimeData>
-#include <QMessageBox>
-#include <QDrag>
-
+#include "DExamenDAM.h"
 
 MainWindow::MainWindow(
         QWidget * parent ,
         Qt::WindowFlags flags ) : QMainWindow(parent,flags) {
             QTimer * temporizador = new QTimer();
-            setAcceptDrops(true);
             /*programare el temporizador */
             temporizador->setInterval(10);
             temporizador->setSingleShot(false);
             temporizador->start();
             QMenuBar  *barra = this->menuBar();
              menuArchivo = menuBar()->addMenu("Archivo");
-         
+             examenMenu = menuBar() ->addMenu("ExamenDialog");
 
             barra->addMenu(menuArchivo);
-          
+            barra->addMenu(examenMenu);
            
-       
+           accionExamen = new QAction("obrir Dialog",this);
             accionInformacion = new QAction("ver Info",this);
-            accionTabBolas = new QAction("Tab Bolas",this);
             menuArchivo->addAction(accionInformacion);
-            menuArchivo ->addAction(accionTabBolas);
+            examenMenu ->addAction(accionExamen);
             /*arrancare el temporizador*/
 
             connect(temporizador,SIGNAL(timeout()),this,SLOT(slotRepintar()));
             connect(accionInformacion,SIGNAL(triggered()),this,SLOT(slotMostrarDialogoInfo()));
-            connect(accionTabBolas,SIGNAL(triggered()),this,SLOT(slotMostrarDControlBolas()));
+            connect(accionExamen,SIGNAL(triggered()),this,SLOT(slotMostrarDialogoExamen()));
             resize(800,600);
 
           
@@ -66,21 +60,19 @@ void MainWindow::paintEvent(QPaintEvent *event){
                  float anchoVerde= ((float)bolas[i]->vida / 100) * bolas[i]->radio;
                   float anchoRojo = (1 * bolas[i]->radio);
                   pintor.setBrush(QBrush(bolas[i]->color));
-                  
-                   pintor.drawEllipse(
+               pintor.drawEllipse(
                    bolas[i]->posX,
                    bolas[i]->posY,
                    bolas[i]->radio,
-                   bolas[i]->radio);      
-                  
+                   bolas[i]->radio);
+                    
                    bolas[i]->moverBola(width(),height());
-
-                    bolas[i]->pinta(pintor);
+                    
                     pintor.setBrush(Qt::red);
                     pintor.drawRect(bolas[i]->posX ,bolas[i]->posY,anchoRojo,5);
                     pintor.setBrush(Qt::green);
                     pintor.drawRect(bolas[i]->posX,bolas[i]->posY,anchoVerde,5);
-                 
+
                   
                     for (int j = 0; j < bolas.size(); j++)
                      {
@@ -121,18 +113,14 @@ void MainWindow::slotMostrarDialogoInfo(){
     dialogo.exec();
 
 }
+void MainWindow::slotMostrarDialogoExamen(){
 
-void MainWindow::slotMostrarDControlBolas(){
-
-    DControlBolas *dialog= new DControlBolas(bolas);
-
-    dialog->show();
-    
-
+  	DExamenDAM examen;
+      examen.exec();
 }
 
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *e){
-    
+
     float mouseX, mouseY;
     int radio=40;
     mouseX =  e->x() -radio/2;
@@ -140,15 +128,12 @@ void MainWindow::mouseDoubleClickEvent(QMouseEvent *e){
 
 
     Bola * nueva = new Bola(mouseX,mouseY,(rand()%100-50)/50.1,(rand()%100-50)/50.1,50);
-   
     bolas.append(nueva);
 
 }
 
 void MainWindow:: mousePressEvent(QMouseEvent * event){
-if (event->button() == Qt::LeftButton)
-        startPos = event->pos();
-    QMainWindow::mousePressEvent(event);
+    eventoInicial = new QMouseEvent(*event);
 
 }
 
@@ -162,56 +147,6 @@ void MainWindow::mouseReleaseEvent(QMouseEvent * event){
 
 
 
-}
-void MainWindow::mouseMoveEvent(QMouseEvent *event)
-{
-    if (event->buttons() & Qt::LeftButton) {
-        int distance = (event->pos() - startPos).manhattanLength();
-        if (distance >= QApplication::startDragDistance())
-            performDrag();
-    }
-    QMainWindow::mouseMoveEvent(event);
-}
-
-void MainWindow::performDrag()
-{
-
-            QMimeData *mimeData = new QMimeData;
-    QPixmap pixmap(size());
-    this->render(&pixmap);
-    mimeData->setImageData(pixmap);
-
-        QDrag *drag = new QDrag(this);
-        drag->setMimeData(mimeData);
-        drag->setPixmap(pixmap);
-        drag->exec(Qt::MoveAction);
-
-
-}
-
-void MainWindow::dropEvent ( QDropEvent * event ){
-    QString text="";  
-     if ( ! event->mimeData()->hasText() ) return;
-    
-     text = event->mimeData()->text();
-    QMessageBox::warning(this, tr("DropEvent triggered"),
-                                tr("El archivo arrastrado es") + text,
-                                QMessageBox::Save | QMessageBox::Discard
-                                | QMessageBox::Cancel,
-                                QMessageBox::Save);
-
-     if ( ! event->mimeData()->hasUrls() ) return;
-
-     text = (event->mimeData()->urls()).first().path();
-
-        QImage * imagenNueva = new QImage(text);
-
-    Bola * nueva = new Bola(10,10,(rand()%100-50)/50.1,(rand()%100-50)/50.1,50);
-    nueva->ponImagen(*imagenNueva);
-    
-    
-    bolas.append(nueva);
-    
 }
 
 

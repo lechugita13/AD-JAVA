@@ -13,11 +13,11 @@ DControlBolas::DControlBolas(QVector <Bola *>bolas,QWidget *parent){
         tabBolas->insertTab(i,new WidgetBola(bolas[i]),QString("Bola "+QString::number(i)));
     }
     
-    connect(tabBolas,SIGNAL(tabBarClicked(int)),this,SLOT(slotCambiarColorSel()));
+    //connect(tabBolas,SIGNAL(tabBarClicked(int)),this,SLOT(slotCambiarColorSel()));
 }
 
 
-void DControlBolas::slotCambiarColorSel(int i){
+//void DControlBolas::slotCambiarColorSel(int i){
 
-    bolasGastar[i]->QColor::black;
-}
+    
+//}

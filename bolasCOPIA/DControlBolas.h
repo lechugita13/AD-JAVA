@@ -13,7 +13,7 @@ public:
     QVector<Bola *> bolasGastar;
         
 public slots:
-     void slotCambiarColorSel();
+     //void slotCambiarColorSel();
 };
 
 #endif  //DINFORMACION_H

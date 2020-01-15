@@ -3,7 +3,6 @@
 #include "bola.h"
 #include <math.h>
 
-
 Bola::Bola(float posX,float posY,float velX,float velY,float radio){
 
     this->posX = posX;
@@ -13,15 +12,10 @@ Bola::Bola(float posX,float posY,float velX,float velY,float radio){
     this->radio = radio;
     vida = 100;
    
-    
     color =  QColor(rand()%256,rand()%256,rand()%256);
 }
 Bola::Bola(float posX,float posY,float velX,float velY,float radio,QColor color):
     Bola(posX,posY,velX,velY,radio){
-       
-      
-       
-
        this->color = color;
 
 }
@@ -113,25 +107,5 @@ void Bola::trompa(){
     
   
 }
-
-void Bola::pinta(QPainter & pintor){
-
-    pintor.drawImage(posX,posY,image);
-   
-}
-
-void Bola::ponImagen(QImage nuevaImagen){
-
-    
-
-    image = QImage(nuevaImagen);
-    image = image.scaled(Bola::radio,Bola::radio);
-
-
-    
-
-}
-
-
 
 

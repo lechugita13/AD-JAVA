@@ -9,9 +9,6 @@
 #include <QMenu>
 #include <QRandomGenerator>
 #include <QMouseEvent>
-#include <QDragEnterEvent>
-#include <QDropEvent>
-#include <QPoint>
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
@@ -25,28 +22,22 @@ public:
        Bola * b;
        
        QMouseEvent * eventoInicial;
-       QPoint startPos;
+      
        QVector<Bola *>bolas;
        QRandomGenerator aleatorizador;
-            
+       QMenu * examenMenu;
 
        QMenu * menuArchivo;
        QAction * accionInformacion;
-       QAction * accionTabBolas;
+       QAction * accionExamen;
         void mouseDoubleClickEvent(QMouseEvent *e);
         void mousePressEvent(QMouseEvent * event);
        void mouseReleaseEvent(QMouseEvent * event);
-         void dragEnterEvent(QDragEnterEvent *event);
-        void mouseMoveEvent(QMouseEvent *event);
-      void dropEvent(QDropEvent *event);
-      void performDrag();
-      void dragEnterEvent(QDragEnterEvent *event);
        
 public slots:
 
        void slotRepintar();
        void slotMostrarDialogoInfo();
-       void slotMostrarDControlBolas();
-     
+      void slotMostrarDialogoExamen();
 };
 #endif 

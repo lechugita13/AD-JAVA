@@ -5,6 +5,7 @@ WidgetBola::WidgetBola(Bola * bola,QWidget *parent): QDialog(parent){
      setupUi(this);
     
     bolaSel = bola;
+    
     connect(botonParar,SIGNAL(clicked()),this,SLOT(slotPararBola()));
     
 
@@ -15,6 +16,9 @@ void WidgetBola::slotPararBola(){
     bolaSel->velX=0;
 
 }
+
+
+
 
 
 

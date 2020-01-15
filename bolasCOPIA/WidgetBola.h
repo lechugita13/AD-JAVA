@@ -5,6 +5,7 @@
 #include "ui_WidgetBola.h"
 #include "bola.h"
 
+
 class WidgetBola : public QDialog,  public Ui::WidgetBola {
 Q_OBJECT
 public:
@@ -13,7 +14,7 @@ public:
     
 public slots:
     void slotPararBola();
-   
+  
 };
 
 #endif  //DINFORMACION_H
