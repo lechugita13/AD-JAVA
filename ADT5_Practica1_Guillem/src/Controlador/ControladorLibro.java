@@ -7,7 +7,7 @@ package Controlador;
 
 import Modelo.Libro;
 import Modelo.LibroDAO;
-import vista.JPLibro;
+import Vista.JPLibro;
 
 /**
  *
@@ -18,8 +18,8 @@ public class ControladorLibro {
     private LibroDAO modeloLibro;
     private JPLibro vistaLibro;
 
-    public ControladorLibro(LibroDAO modeloLibro, JPLibro vistaLibro) {
-        this.modeloLibro = modeloLibro;
+    public ControladorLibro(JPLibro vistaLibro) {
+        this.modeloLibro = new LibroDAO();
         this.vistaLibro = vistaLibro;
     }
 

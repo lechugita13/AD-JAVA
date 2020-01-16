@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package Vista;
 
 import Controlador.ControladorLibro;
 import Modelo.LibroDAO;
@@ -18,15 +18,15 @@ import javax.swing.JTextField;
 public class JPLibro extends javax.swing.JPanel {
 
     private ControladorLibro controlador;
-    private LibroDAO libroDAO;
+
    
     /**
      * Creates new form JPLibro
      */
     public JPLibro() {
         initComponents();
-        libroDAO = new LibroDAO();
-        controlador = new ControladorLibro(libroDAO,this); 
+       
+        controlador = new ControladorLibro(this); 
     }
 
     public JComboBox<String> getCbEditorial() {
