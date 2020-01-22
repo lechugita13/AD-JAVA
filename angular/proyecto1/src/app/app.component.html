@@ -1,0 +1,18 @@
+<!--<div>
+  <p>Nombre: {{nombre}}</p>
+  <p>Edad: {{edad}}</p>
+  <p>Direccion: {{direccion()}}</p>
+  <p *ngIf="edad>=18 else menor">Es mayor de edad</p>
+  <ng-template #menor><p>es menor de edad</p></ng-template>
+  <ul>
+    <li *ngFor="let number of numeros">{{number}}</li>
+  </ul>
+</div>-->
+
+<div>
+  <p>{{contador}}</p>
+  <p>Nombre: {{nombre}}</p>
+  <button (click)="incrementar()">Sumar</button>
+  <button (click)="decrementar()">Restar</button>
+  <input type="text" [(ngModel)]="nombre">
+</div>
