@@ -43,8 +43,9 @@ public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> imple
 
     @Override
     public int getItemCount() {
-        return this.listaRobots.size();
+        return 0;
     }
+
 
     @Override
     public void onClick(View view) {

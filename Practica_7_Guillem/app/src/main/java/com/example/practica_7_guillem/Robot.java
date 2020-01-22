@@ -16,6 +16,22 @@ public class Robot implements Parcelable {
     public Robot() {
     }
 
+    public Tipo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Robot(String nombre, String material, int anyo, Tipo tipo) {
         this.nombre = nombre;
         this.material = material;
