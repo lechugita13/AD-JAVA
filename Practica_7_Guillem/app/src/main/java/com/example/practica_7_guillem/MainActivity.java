@@ -15,6 +15,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +28,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private boolean pantallaMovil;
     ArrayList<Robot> listaRobots = new ArrayList<>();
     private TextView tvNoHayRobots;
     private RecyclerView recycler;
@@ -37,7 +40,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
 
+        ListadoRobotsFragment listadoFragment = ListadoRobotsFragment.newInstance();
+
+        pantallaMovil = getSupportFragmentManager().findFragmentById(R.id.fgrag_lista)==null;
+
+        if (pantallaMovil){
+            FragmentManager fragmentManager1 = getSupportFragmentManager();
+            FragmentTransaction transaction1 =fragmentManager1.beginTransaction();
+
+            ListadoRobotsFragment listadoRobotsFragment = ListadoRobotsFragment.newInstance();
+            transaction1.add(R.id.layout_contenedor,listadoFragment);
+            transaction1.addToBackStack(null);
+            transaction1.commit();
+        }
+        transaction.add(R.id.layout_contenedor, listadoFragment);
+        transaction.commit();
         getSupportActionBar().setTitle("Listado de robots");
         recycler = findViewById(R.id.recycler);
         tvNoHayRobots = findViewById(R.id.tvNoHayRobots);

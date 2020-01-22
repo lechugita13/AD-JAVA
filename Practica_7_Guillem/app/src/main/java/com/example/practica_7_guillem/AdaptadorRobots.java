@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> {
+public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> implements View.OnClickListener {
 
     private ArrayList<Robot> listaRobots;
     private Context context;
@@ -18,6 +19,10 @@ public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> {
     public AdaptadorRobots(ArrayList<Robot> listaRobots, Context context) {
         this.listaRobots = listaRobots;
         this.context = context;
+    }
+
+    public AdaptadorRobots(FragmentActivity activity, ArrayList<Robot> robots) {
+
     }
 
     @NonNull
@@ -39,5 +44,16 @@ public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> {
     @Override
     public int getItemCount() {
         return this.listaRobots.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        return;
+
+    }
+
+    public void setOnClickListener(ListadoRobotsFragment listadoRobotsFragment) {
+        return;
     }
 }

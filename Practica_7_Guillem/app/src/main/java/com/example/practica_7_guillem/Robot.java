@@ -1,13 +1,17 @@
 package com.example.practica_7_guillem;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
-public class Robot implements Serializable {
+public class Robot implements Parcelable {
 
     public String nombre;
     public String material;
     public int anyo;
     public Tipo tipo;
+
 
     public Robot() {
     }
@@ -17,5 +21,35 @@ public class Robot implements Serializable {
         this.material = material;
         this.anyo = anyo;
         this.tipo = tipo;
+    }
+
+    protected Robot(Parcel in) {
+        nombre = in.readString();
+        material = in.readString();
+        anyo = in.readInt();
+    }
+
+    public static final Creator<Robot> CREATOR = new Creator<Robot>() {
+        @Override
+        public Robot createFromParcel(Parcel in) {
+            return new Robot(in);
+        }
+
+        @Override
+        public Robot[] newArray(int size) {
+            return new Robot[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(nombre);
+        parcel.writeString(material);
+        parcel.writeInt(anyo);
     }
 }
