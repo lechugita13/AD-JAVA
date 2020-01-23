@@ -24,10 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AdaptadorRobots adaptador;
     private LinearLayoutManager layoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_listado_robots);
 
         pantallaMovil = getSupportFragmentManager().findFragmentById(R.id.fgrag_lista)==null;
 
@@ -115,16 +116,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == 0 && resultCode == 0) {
             Robot r;
             try {
-                r = (Robot) data.getSerializableExtra("Robot");
+                Bundle proba;
+                proba = data.getExtras();
+
+                r=(Robot) proba.get("Robot");
                 anyadirNuevoRobot(r);
             } catch (NullPointerException e) {
                 return;
             }
         } else if (requestCode == 1 && resultCode == 0) {
             try {
-                Robot r = (Robot) data.getSerializableExtra("Robot");
+                Robot r;
+                Bundle proba;
+                proba = data.getExtras();
+
+                r=(Robot) proba.get("Robot");
                 int i = data.getIntExtra("pos", 0);
-                this.listaRobots.set(i, r);
+                this.listaRobots.set(i,r);
                 adaptador.notifyItemChanged(i);
             } catch (NullPointerException e) {
                 return;
@@ -134,8 +142,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void anyadirNuevoRobot(final Robot r) {
         // añadir robot
-        this.listaRobots.add(0, r);
-        this.adaptador.notifyItemInserted(0);
+        this.listaRobots.add(r);
+        //this.adaptador.notifyItemInserted(0);
 
 
     }
