@@ -1,6 +1,7 @@
 package com.example.practica_7_guillem;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> implements View.OnClickListener {
+public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> implements RobotViewHolder.OnArray {
 
     private ArrayList<Robot> listaRobots;
     private Context context;
@@ -19,18 +20,17 @@ public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> imple
     public AdaptadorRobots(ArrayList<Robot> listaRobots, Context context) {
         this.listaRobots = listaRobots;
         this.context = context;
-    }
-
-    public AdaptadorRobots(FragmentActivity activity, ArrayList<Robot> robots) {
 
     }
+
+
 
     @NonNull
     @Override
     public RobotViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.layout_robot, parent, false);
-        RobotViewHolder viewHolder = new RobotViewHolder(itemView, this.context);
+        RobotViewHolder viewHolder = new RobotViewHolder(itemView, this.context,this);
 
 
         return viewHolder;
@@ -48,13 +48,8 @@ public class AdaptadorRobots extends RecyclerView.Adapter<RobotViewHolder> imple
 
 
     @Override
-    public void onClick(View view) {
+    public void onArrayClick(int pos) {
 
-        return;
-
-    }
-
-    public void setOnClickListener(ListadoRobotsFragment listadoRobotsFragment) {
-        return;
+        Log.d("pepe", "onArrayClick: ");
     }
 }

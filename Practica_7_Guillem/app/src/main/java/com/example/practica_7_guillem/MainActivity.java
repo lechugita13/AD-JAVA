@@ -3,6 +3,7 @@ package com.example.practica_7_guillem;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements  View.OnClickListener,ListadoRobotsFragment.OnRobotSelected{
 
     private boolean pantallaMovil;
     ArrayList<Robot> listaRobots = new ArrayList<>();
@@ -28,11 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_listado_robots);
+        setContentView(R.layout.activity_main);
 
         pantallaMovil = getSupportFragmentManager().findFragmentById(R.id.fgrag_lista)==null;
 
         if (pantallaMovil){
+            Log.d("pepe", "onCreate: ");
             FragmentManager fragmentManager1 = getSupportFragmentManager();
             FragmentTransaction transaction1 =fragmentManager1.beginTransaction();
 
@@ -40,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             transaction1.add(R.id.layout_contenedor,listadoRobotsFragment);
             transaction1.addToBackStack(null);
             transaction1.commit();
-        }else{
-
         }
 
         getSupportActionBar().setTitle("Listado de robots");
@@ -84,20 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
-    public void onRobotSelected(Robot robotSeleccionado){
-        if (pantallaMovil){
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-            DetalleRobotFragment detalleRobotFragment = DetalleRobotFragment.newInstance(robotSeleccionado);
-            transaction.replace(R.id.layout_contenedor,detalleRobotFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
-        }else{
-            DetalleRobotFragment fragmentDetalle = (DetalleRobotFragment) getSupportFragmentManager().findFragmentById(R.id.fgrag_detalle);
-            fragmentDetalle.actualizarDatos(robotSeleccionado);
-        }
-    }
 
     @Override
     public void onClick(View v) {
@@ -140,11 +126,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
     private void anyadirNuevoRobot(final Robot r) {
         // añadir robot
         this.listaRobots.add(r);
         //this.adaptador.notifyItemInserted(0);
 
 
+    }
+
+    @Override
+    public void onRobotSelectedClick(Robot robotSelected) {
+
+        if (pantallaMovil){
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+            DetalleRobotFragment detalleRobotFragment = DetalleRobotFragment.newInstance(robotSelected);
+            transaction.replace(R.id.layout_contenedor,detalleRobotFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }else{
+            DetalleRobotFragment fragmentDetalle = (DetalleRobotFragment) getSupportFragmentManager().findFragmentById(R.id.fgrag_detalle);
+            fragmentDetalle.actualizarDatos(robotSelected);
+        }
     }
 }

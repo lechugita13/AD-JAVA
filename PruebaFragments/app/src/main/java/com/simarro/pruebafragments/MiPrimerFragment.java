@@ -66,6 +66,7 @@ public class MiPrimerFragment extends Fragment implements View.OnClickListener{
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnMiPrimerFragmentListener){
+
             mListener = (OnMiPrimerFragmentListener) context;
 
         }else{
@@ -83,7 +84,8 @@ public class MiPrimerFragment extends Fragment implements View.OnClickListener{
 
     }
     public interface OnMiPrimerFragmentListener{
-        public void OnMiPrimerFragmentClick();
+
+        void OnMiPrimerFragmentClick();
 
     }
 

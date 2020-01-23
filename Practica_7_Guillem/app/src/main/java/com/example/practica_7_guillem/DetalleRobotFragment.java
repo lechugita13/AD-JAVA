@@ -10,9 +10,7 @@ import java.util.ArrayList;
 public class DetalleRobotFragment extends Fragment {
 
     ImageView imagen;
-    ArrayList<Robot> robots;
-    AdaptadorRobots robotsAdapter;
-    RecyclerView recyclerView;
+
 
     public static DetalleRobotFragment newInstance(Robot robotSeleccionado) {
         DetalleRobotFragment mFragment = new DetalleRobotFragment();

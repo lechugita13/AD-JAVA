@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RobotViewHolder extends RecyclerView.ViewHolder {
+public class RobotViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     private Context context;
 
@@ -17,8 +17,10 @@ public class RobotViewHolder extends RecyclerView.ViewHolder {
     private TextView tvNomRobot;
     private TextView tvAnyo;
     private TextView tvMaterial;
+    private OnArray mListener;
 
-    public RobotViewHolder(@NonNull View itemView, Context context) {
+
+    public RobotViewHolder(@NonNull View itemView, Context context,OnArray interfaz) {
         super(itemView);
         this.context = context;
 
@@ -26,6 +28,12 @@ public class RobotViewHolder extends RecyclerView.ViewHolder {
         this.tvNomRobot = itemView.findViewById(R.id.tvNomRobot);
         this.tvAnyo = itemView.findViewById(R.id.tvAnyo);
         this.tvMaterial = itemView.findViewById(R.id.tvMaterial);
+
+        if (interfaz instanceof OnArray){
+            mListener = interfaz ;
+        }
+
+
     }
 
     public void bindRobot(Robot r) {
@@ -51,4 +59,14 @@ public class RobotViewHolder extends RecyclerView.ViewHolder {
         this.tvMaterial.setText(r.material);
     }
 
+
+    @Override
+    public void onClick(View view) {
+
+        mListener.onArrayClick(getAdapterPosition());
+    }
+
+    public interface OnArray{
+        void onArrayClick(int pos);
+    }
 }
