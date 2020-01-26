@@ -8,7 +8,7 @@ package controlador;
 import javax.swing.JTable;
 import modelo.Libro;
 import modelo.LibroDAO;
-import vista.JDLibros;
+import Vista.JDLibros;
 import vista.JPLibro;
 
 /**

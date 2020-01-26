@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JPPrestamo.java</file>
-            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JPSocio.java</file>
+            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/controlador/ControladorSocio.java</file>
+            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/modelo/SocioDAO.java</file>
+            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/controlador/ControladorLibro.java</file>
             <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JPLibro.java</file>
-            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JDSocios.java</file>
-            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JFPrincipal.java</file>
-            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/vista/JDLibros.java</file>
+            <file>file:/D:/SEGON%20DAM/AD/AD-JAVA/PracticaPatronsDisenyEdgar/src/modelo/LibroDAO.java</file>
         </group>
     </open-files>
 </project-private>

@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import javax.swing.JTable;
 import modelo.Socio;
 import modelo.SocioDAO;
-import vista.JDSocios;
+import Vista.JDSocios;
 import vista.JPSocio;
 
 /**

@@ -5,6 +5,10 @@
  */
 package vista;
 
+import Vista.JDSocios;
+import Vista.JDLibros;
+import Vista.JPPrestamo;
+
 /**
  *
  * @author Edgar
