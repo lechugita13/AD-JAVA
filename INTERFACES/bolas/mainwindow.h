@@ -11,6 +11,8 @@
 #include <QRandomGenerator>
 #include <QMouseEvent>
 
+
+
 class MainWindow : public QMainWindow {
 Q_OBJECT
 public:
@@ -29,6 +31,8 @@ public:
             
 
        QMenu * menuArchivo;
+       QMenu * menuGrafico;
+       QAction *accionGraficoBolas;
        QAction * accionInformacion;
        QAction * accionTabBolas;
         void mouseDoubleClickEvent(QMouseEvent *e);
@@ -40,6 +44,6 @@ public slots:
        void slotRepintar();
        void slotMostrarDialogoInfo();
        void slotMostrarDControlBolas();
-     
+      void slotMostrarGraficoBolas();
 };
 #endif 

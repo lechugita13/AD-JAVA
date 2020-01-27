@@ -6,7 +6,7 @@
 #include "mainwindow.h"
 #include "DInformacion.h"
 #include "DControlBolas.h"
-
+#include "DGraficoBolas.h"
 MainWindow::MainWindow(
         QWidget * parent ,
         Qt::WindowFlags flags ) : QMainWindow(parent,flags) {
@@ -16,22 +16,25 @@ MainWindow::MainWindow(
             temporizador->setSingleShot(false);
             temporizador->start();
             QMenuBar  *barra = this->menuBar();
-             menuArchivo = menuBar()->addMenu("Archivo");
-         
+            menuArchivo = menuBar()->addMenu("Archivo");
+            menuGrafico = menuBar()->addMenu("Grafico");
 
             barra->addMenu(menuArchivo);
-          
+            barra->addMenu(menuGrafico);
            
-       
+            accionGraficoBolas = new QAction("Grafico Bolas",this);
             accionInformacion = new QAction("ver Info",this);
             accionTabBolas = new QAction("Tab Bolas",this);
             menuArchivo->addAction(accionInformacion);
             menuArchivo ->addAction(accionTabBolas);
+            menuGrafico->addAction(accionGraficoBolas);
             /*arrancare el temporizador*/
 
             connect(temporizador,SIGNAL(timeout()),this,SLOT(slotRepintar()));
             connect(accionInformacion,SIGNAL(triggered()),this,SLOT(slotMostrarDialogoInfo()));
             connect(accionTabBolas,SIGNAL(triggered()),this,SLOT(slotMostrarDControlBolas()));
+            connect(accionGraficoBolas,SIGNAL(triggered()),this,SLOT(slotMostrarGraficoBolas()));
+
             resize(800,600);
 
           
@@ -154,4 +157,10 @@ void MainWindow::mouseReleaseEvent(QMouseEvent * event){
 
 }
 
+void MainWindow::slotMostrarGraficoBolas(){
 
+    DGraficoBolas *dialog = new DGraficoBolas(bolas);
+
+    dialog->show();
+
+}

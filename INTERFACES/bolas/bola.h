@@ -12,6 +12,7 @@ class Bola {
     QColor color;
     float radio;
     int vida;
+    int colisions;
     float distancia(Bola otra);
     bool chocar(Bola *otra);
     void trompa();

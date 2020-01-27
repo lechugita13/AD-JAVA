@@ -10,6 +10,7 @@ Bola::Bola(float posX,float posY,float velX,float velY,float radio){
     this->velX = velX;
     this->velY = velY;
     this->radio = radio;
+    colisions = 0;
     vida = 100;
    
     color =  QColor(rand()%256,rand()%256,rand()%256);
