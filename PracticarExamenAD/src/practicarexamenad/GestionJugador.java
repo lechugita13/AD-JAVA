@@ -50,13 +50,8 @@ class GestionJugador {
         } catch (IOException ex) {
             Logger.getLogger(GestionJugador.class.getName()).log(Level.SEVERE, null, ex);
             return false;
-        } finally {
-            try {
-                oos.close();
-            } catch (IOException ex) {
-                Logger.getLogger(GestionJugador.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        } 
+        
         return true;
 
     }
