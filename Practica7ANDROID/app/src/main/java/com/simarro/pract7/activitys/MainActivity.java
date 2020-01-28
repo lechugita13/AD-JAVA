@@ -68,12 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         getSupportActionBar().setTitle("Listado de robots");
 
-        FragmentManager fragmentManager =getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        ListadoRobotsFragment listadoRobotsFragment = ListadoRobotsFragment.newInstance();
-        transaction.add(R.id.,listadoRobotsFragment);
-        transaction.commit();
         ItemTouchHelper.SimpleCallback myCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {

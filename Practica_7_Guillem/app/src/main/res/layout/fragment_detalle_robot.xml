@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+ >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:padding="8dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/img_robot"
+            android:layout_width="?android:attr/listPreferredItemHeightLarge"
+            android:layout_height="?android:attr/listPreferredItemHeightLarge"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bender">
+        </ImageView>
+        <TextView
+            android:id="@+id/tv_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre Robot"
+            android:layout_toRightOf="@+id/img_robot"
+            android:layout_alignParentTop="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:maxLines="1">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nombre"
+            android:layout_toRightOf="@+id/img_robot"
+            android:text="Material">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_anyo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:maxLines="1"
+            android:textColor="@color/colorAccent"
+            android:layout_toRightOf="@+id/img_robot"
+            android:layout_below="@+id/tv_material">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:layout_toRightOf="@+id/img_robot"
+            android:layout_below="@+id/tv_anyo">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_titulo_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_robot"
+            android:text="Descripción:"
+            android:textStyle="bold">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_descripción"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_titulo_des"
+            android:text="Este es el segundo robot.">
+
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

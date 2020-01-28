@@ -1,63 +1,38 @@
 package com.example.practica_7_guillem;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.os.Bundle;
+
+
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+
 import java.util.ArrayList;
 
-public class ListadoRobotsFragment extends Fragment implements RobotViewHolder.OnArray{
+public class ListadoRobotsFragment extends Fragment implements View.OnClickListener {
 
-    ArrayList<Robot> robots;
-    AdaptadorRobots robotsAdapter;
-    RecyclerView recyclerView;
-    private OnRobotSelected mListener;
-
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_listado_robots,container,false);
-        getActivity().setTitle("Listado robots");
-
-        robots = new ArrayList<>();
-        robots.add(new Robot("Guillem","Hierro",2000,Tipo.BENDER));
-        robots.add(new Robot("Sara","Titanio",1800,Tipo.R2D2));
-        robots.add(new Robot("Toni","Chapa",3000,Tipo.WALLE));
-        int tamaño = robots.size();
+    private final static String ARG_NOMBRE = "ARG_NOMBRE";
+    private OnArrayClickListener mListener;
+    private ArrayList<Robot> robots;
+    private AdaptadorRobots adaptador;
+    private RecyclerView recyclerView;
+    private String nombre;
 
 
-        robotsAdapter = new AdaptadorRobots(robots, getActivity());
-
-
-        recyclerView = view.findViewById(R.id.fantasia);
-        recyclerView.setAdapter(robotsAdapter);
-        recyclerView.setVisibility(View.VISIBLE);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
-        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
-
-
-        return view;
-
-    }
-
-
-    public static ListadoRobotsFragment newInstance() {
-
+    public static ListadoRobotsFragment newInstance(String nombre) {
         Bundle informacionParaFragment = new Bundle();
+
+
+        informacionParaFragment.putString(ARG_NOMBRE, nombre);
+        //informacionParaFragment.putString(ARG_DIRECCION, direccion);
 
         ListadoRobotsFragment mFragment = new ListadoRobotsFragment();
         mFragment.setArguments(informacionParaFragment);
@@ -67,25 +42,50 @@ public class ListadoRobotsFragment extends Fragment implements RobotViewHolder.O
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        if (context instanceof OnArrayClickListener){
+            mListener = (OnArrayClickListener) context;
 
-        if (mListener instanceof OnRobotSelected){
-
-            mListener = (OnRobotSelected) context;
+        }else{
+            throw new RuntimeException(context.toString() + "debe implementar");
         }
-
-
     }
 
     @Override
-    public void onArrayClick(int pos) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
 
-        mListener.onRobotSelectedClick(robots.get(pos));
+        View view = inflater.inflate(R.layout.fragment_listado_robots,container,false);
 
+        getActivity().setTitle("Listado de robots");
+
+        robots = new ArrayList<>();
+
+        robots.add(new Robot(1,"Hierrocop","Hierro",2000, "BENDER",1000, "Esta es la descripción del primer robot."));
+        robots.add(new Robot(2,"Titacop","Titanio",2012, "R2D2",2000,"Esta es la descripción del segundo robot."));
+        robots.add(new Robot(3,"Acercop", "Acero",2022, "WALLE",1000,"Esta es la descripción del tercer robot"));
+
+        adaptador = new AdaptadorRobots(robots, this.getActivity());
+        adaptador.setOnClickListener(this);
+        recyclerView = view.findViewById(R.id.rv_robots);
+        recyclerView.setAdapter(adaptador);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
+
+        //recyclerView.setOnClickListener(this);
+
+        return view;
     }
 
+    @Override
+    public void onClick(View v) {
 
-    public interface OnRobotSelected{
-        void onRobotSelectedClick(Robot robotSelected);
+        Robot editar = robots.get(recyclerView.getChildAdapterPosition(v));
+        mListener.onArrayClick(editar);
+    }
+
+    public interface OnArrayClickListener {
+
+        void onArrayClick(Robot editar);
     }
 }

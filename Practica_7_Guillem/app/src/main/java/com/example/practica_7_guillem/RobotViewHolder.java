@@ -1,72 +1,43 @@
 package com.example.practica_7_guillem;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RobotViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    private Context context;
 
-    private ImageView imagen;
-    private TextView tvNomRobot;
-    private TextView tvAnyo;
+public class RobotViewHolder extends RecyclerView.ViewHolder{
+
+    private ImageView imgRobot;
+    private TextView tvNombre;
     private TextView tvMaterial;
-    private OnArray mListener;
+    private TextView tvAnyo;
+    private Context contexto;
 
-
-    public RobotViewHolder(@NonNull View itemView, Context context,OnArray interfaz) {
+    public RobotViewHolder(View itemView, Context context){
         super(itemView);
-        this.context = context;
 
-        this.imagen = itemView.findViewById(R.id.imagen);
-        this.tvNomRobot = itemView.findViewById(R.id.tvNomRobot);
-        this.tvAnyo = itemView.findViewById(R.id.tvAnyo);
-        this.tvMaterial = itemView.findViewById(R.id.tvMaterial);
+        imgRobot = itemView.findViewById(R.id.img_robot);
+        tvNombre = itemView.findViewById(R.id.tv_nombre);
+        tvMaterial = itemView.findViewById(R.id.tv_material);
+        tvAnyo = itemView.findViewById(R.id.tv_anyo);
+        contexto = context;
+    }
 
-        if (interfaz instanceof OnArray){
-            mListener = interfaz ;
+    public  void bindAlumno(Robot a){
+
+        if(a.getTipo().equals("R2D2")){
+            imgRobot.setImageDrawable(contexto.getDrawable(R.drawable.rdosddos));
+        }else if(a.getTipo().equals("BENDER")){
+            imgRobot.setImageDrawable(contexto.getDrawable(R.drawable.bender));
+        }else{
+            imgRobot.setImageDrawable(contexto.getDrawable(R.drawable.walle));
         }
-
-
-    }
-
-    public void bindRobot(Robot r) {
-        Drawable d = this.context.getDrawable(R.drawable.rdosddos);
-        switch (r.tipo) {
-            case R2D2: {
-                d = this.context.getDrawable(R.drawable.rdosddos);
-                break;
-            }
-            case BENDER: {
-                d = this.context.getDrawable(R.drawable.bender);
-                break;
-            }
-            case WALLE: {
-                d = this.context.getDrawable(R.drawable.walle);
-                break;
-            }
-        }
-        this.imagen.setImageDrawable(d);
-
-        this.tvNomRobot.setText(r.nombre);
-        this.tvAnyo.setText(String.valueOf(r.anyo));
-        this.tvMaterial.setText(r.material);
-    }
-
-
-    @Override
-    public void onClick(View view) {
-
-        mListener.onArrayClick(getAdapterPosition());
-    }
-
-    public interface OnArray{
-        void onArrayClick(int pos);
+        tvNombre.setText(a.getNombre());
+        tvMaterial.setText(a.getMaterial());
+        tvAnyo.setText(Integer.toString(a.getAnyo()));
     }
 }

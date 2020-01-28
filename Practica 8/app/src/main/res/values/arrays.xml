@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="valores_categoria">
+        <item>Categoria nivel 1</item>
+        <item>Categoria nivel 2</item>
+        <item>Categoria nivel 3</item>
+        <item>Categoria nivel 4</item>
+    </string-array>
+    <string-array name="categorias">
+        <item>Categoria nivel 1</item>
+        <item>Categoria nivel 2</item>
+        <item>Categoria nivel 3</item>
+        <item>Categoria nivel 4</item>
+    </string-array>
+</resources>

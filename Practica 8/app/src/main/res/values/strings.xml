@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Practica_8</string>
+    <string name="preferencias_fragment">Preferencias Fragment</string>
+    <string name="perfil_fragment">Perfil Fragment</string>
+    <string-array name="servidores">
+        <item>España</item>
+        <item>Estados Unidos</item>
+        <item>Italia</item>
+        <item>Reino Unido</item>
+    </string-array>
+    <string-array name="valores_servidor">
+        <item>spa</item>
+        <item>usa</item>
+        <item>ita</item>
+        <item>ukk</item>
+    </string-array>
 </resources>

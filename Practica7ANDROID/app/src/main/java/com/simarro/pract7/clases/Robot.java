@@ -6,7 +6,7 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 
-public class Robot implements Parcelable {
+public class Robot implements Serializable {
 
     private String dni;
     private String nombre;
@@ -26,17 +26,7 @@ public class Robot implements Parcelable {
         sexo = (char) in.readInt();
     }
 
-    public static final Creator<Robot> CREATOR = new Creator<Robot>() {
-        @Override
-        public Robot createFromParcel(Parcel in) {
-            return new Robot(in);
-        }
 
-        @Override
-        public Robot[] newArray(int size) {
-            return new Robot[size];
-        }
-    };
 
     public String getDni() {
         return dni;
@@ -62,15 +52,5 @@ public class Robot implements Parcelable {
         this.sexo = sexo;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(dni);
-        parcel.writeString(nombre);
-        parcel.writeInt((int) sexo);
-    }
 }
