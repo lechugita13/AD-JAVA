@@ -37,13 +37,13 @@ class GestionJugador {
 
     public boolean guardarAFichero(Jugador j) {
 
-        ObjectOutputStream oos = null;
+        
         try {
             if (this.inicializarJugador(j)) {
                 return true;
             }
             File fitxer = new File(this.nomFitxer);
-            oos = new ObjectOutputStream(new FileOutputStream(fitxer, true));
+           AppendableObjectOutputStream oos = new AppendableObjectOutputStream(new FileOutputStream(fitxer, true));
             oos.writeObject(j);
             oos.close();
 

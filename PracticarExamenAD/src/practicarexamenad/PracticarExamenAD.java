@@ -64,6 +64,21 @@ public class PracticarExamenAD {
         System.out.println("Introduce el equipo a buscar o equipos");
         String equipo = entrada.nextLine();
         ArrayList<Jugador> listaGoleadores = gestion.listarJugadores();
+        if (!equipo.equals("equipos")) {
+            for (int i = (listaGoleadores.size()-1); i >= 0; i--) {
+                Jugador j = listaGoleadores.get(i);
+                if (!equipo.equals(j.getEquipo())) {
+                    listaGoleadores.remove(j);
+                }
+            }
+        }
+        System.out.println("Jugadores: ");
+        if (listaGoleadores.isEmpty()) {
+            System.out.println("NADA COINCIDE CON EL CRITERIO DE BUSQUEDA");
+        }
+        for (Jugador j : listaGoleadores) {
+            System.out.println(j);
+        }
     }
 
     private static void crearJugador() {
