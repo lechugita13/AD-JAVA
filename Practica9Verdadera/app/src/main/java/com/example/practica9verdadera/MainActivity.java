@@ -2,13 +2,15 @@ package com.example.practica9verdadera;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
+
+
 
 import com.example.practica9verdadera.fragments.Fragment1;
 import com.example.practica9verdadera.fragments.Fragment2;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     DrawerLayout drawerLayout;
     NavigationView navView;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +32,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
 
         navView = findViewById(R.id.nav_view);
-
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
         navView.setNavigationItemSelectedListener(this);
+
 
 
     }
