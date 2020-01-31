@@ -54,7 +54,7 @@ private:
 	QPoint posSalida;
 	QPoint startPos;
 	QAction * accionGraficos;
-	
+	QAction * accionTree;
 	
         
 public slots:
@@ -65,6 +65,7 @@ public slots:
 	void slotInfoTabla();
 	void slotControlBolas();
 	void slotGraficos();
+	void slotTreeView();
 };
 
 #endif 

@@ -73,6 +73,9 @@ void MainWindow::crearQActions(){
 
 	accionGraficos = new QAction("Graficos", this);
 	connect(accionGraficos, SIGNAL(triggered()), this, SLOT(slotGraficos()));
+
+	accionTree = new QAction("Tree", this);
+	connect(accionTree, SIGNAL(triggered()), this, SLOT(slotTreeView()));
 }
 
 void MainWindow::crearMenus(){
@@ -84,7 +87,7 @@ void MainWindow::crearMenus(){
         menuDialogos->addAction(accionExamen);
         menuDialogos->addAction(accionTabla);
 	menuDialogos->addAction(accionControlBolas);
-	
+	menuDialogos->addAction(accionTree);
         this->setContextMenuPolicy(Qt::ActionsContextMenu);
         this->addAction(accionDialogo);
 	this->addAction(accionExamen);
@@ -303,6 +306,14 @@ void MainWindow::slotExamen(void){
 void MainWindow::slotInfoTabla(void){
 
 	DialogoTabla * dialogo = new DialogoTabla(&bolas);
+	dialogo->show();	
+
+
+}
+
+void MainWindow::slotTreeView(void){
+
+	DTreeView * dialogo = new DTreeView(&bolas);
 	dialogo->show();	
 
 

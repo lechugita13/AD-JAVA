@@ -19,47 +19,47 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_DTreeView
 {
 public:
     QDialogButtonBox *buttonBox;
     QTreeView *treeView;
     QPushButton *refreshTree;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *DTreeView)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QString::fromUtf8("Dialog"));
-        Dialog->resize(622, 482);
-        buttonBox = new QDialogButtonBox(Dialog);
+        if (DTreeView->objectName().isEmpty())
+            DTreeView->setObjectName(QString::fromUtf8("DTreeView"));
+        DTreeView->resize(622, 482);
+        buttonBox = new QDialogButtonBox(DTreeView);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(240, 430, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        treeView = new QTreeView(Dialog);
+        treeView = new QTreeView(DTreeView);
         treeView->setObjectName(QString::fromUtf8("treeView"));
         treeView->setGeometry(QRect(10, 10, 601, 361));
-        refreshTree = new QPushButton(Dialog);
+        refreshTree = new QPushButton(DTreeView);
         refreshTree->setObjectName(QString::fromUtf8("refreshTree"));
         refreshTree->setGeometry(QRect(210, 390, 201, 25));
 
-        retranslateUi(Dialog);
-        QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), Dialog, SLOT(reject()));
+        retranslateUi(DTreeView);
+        QObject::connect(buttonBox, SIGNAL(accepted()), DTreeView, SLOT(accept()));
+        QObject::connect(buttonBox, SIGNAL(rejected()), DTreeView, SLOT(reject()));
 
-        QMetaObject::connectSlotsByName(Dialog);
+        QMetaObject::connectSlotsByName(DTreeView);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *DTreeView)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
-        refreshTree->setText(QApplication::translate("Dialog", "Recargar Arbol", nullptr));
+        DTreeView->setWindowTitle(QApplication::translate("DTreeView", "Dialog", nullptr));
+        refreshTree->setText(QApplication::translate("DTreeView", "Recargar Arbol", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class DTreeView: public Ui_DTreeView {};
 } // namespace Ui
 
 QT_END_NAMESPACE

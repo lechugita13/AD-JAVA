@@ -7,6 +7,7 @@
 #include <QVector>
 
 
+
 class MiModelo;
 
 class DialogoTabla : public QDialog, public Ui::DialogoTabla {

@@ -58,6 +58,7 @@ SOURCES       = bola.cpp \
 		DExamenDAM.cpp \
 		DialogoGraficos.cpp \
 		DialogoTabla.cpp \
+		DTreeView.cpp \
 		InfoDialog.cpp \
 		main.cpp \
 		mainwindow.cpp \
@@ -65,6 +66,7 @@ SOURCES       = bola.cpp \
 		moc_DExamenDAM.cpp \
 		moc_DialogoGraficos.cpp \
 		moc_DialogoTabla.cpp \
+		moc_DTreeView.cpp \
 		moc_InfoDialog.cpp \
 		moc_mainwindow.cpp \
 		moc_WidgetBola.cpp
@@ -74,6 +76,7 @@ OBJECTS       = bola.o \
 		DExamenDAM.o \
 		DialogoGraficos.o \
 		DialogoTabla.o \
+		DTreeView.o \
 		InfoDialog.o \
 		main.o \
 		mainwindow.o \
@@ -82,6 +85,7 @@ OBJECTS       = bola.o \
 		moc_DExamenDAM.o \
 		moc_DialogoGraficos.o \
 		moc_DialogoTabla.o \
+		moc_DTreeView.o \
 		moc_InfoDialog.o \
 		moc_mainwindow.o \
 		moc_WidgetBola.o
@@ -171,6 +175,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		DExamenDAM.h \
 		DialogoGraficos.h \
 		DialogoTabla.h \
+		DTreeView.h \
 		InfoDialog.h \
 		mainwindow.h \
 		WidgetBola.h bola.cpp \
@@ -179,6 +184,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		DExamenDAM.cpp \
 		DialogoGraficos.cpp \
 		DialogoTabla.cpp \
+		DTreeView.cpp \
 		InfoDialog.cpp \
 		main.cpp \
 		mainwindow.cpp \
@@ -380,8 +386,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents bola.h BolaYWidget.h DControlBolas.h DExamenDAM.h DialogoGraficos.h DialogoTabla.h InfoDialog.h mainwindow.h WidgetBola.h $(DISTDIR)/
-	$(COPY_FILE) --parents bola.cpp BolaYWidget.cpp DControlBolas.cpp DExamenDAM.cpp DialogoGraficos.cpp DialogoTabla.cpp InfoDialog.cpp main.cpp mainwindow.cpp WidgetBola.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents bola.h BolaYWidget.h DControlBolas.h DExamenDAM.h DialogoGraficos.h DialogoTabla.h DTreeView.h InfoDialog.h mainwindow.h WidgetBola.h $(DISTDIR)/
+	$(COPY_FILE) --parents bola.cpp BolaYWidget.cpp DControlBolas.cpp DExamenDAM.cpp DialogoGraficos.cpp DialogoTabla.cpp DTreeView.cpp InfoDialog.cpp main.cpp mainwindow.cpp WidgetBola.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents DControlBolas.ui DExamenDAM.ui DialogoGraficos.ui DialogoTabla.ui DTreeView.ui InfoDialog.ui WidgetBola.ui $(DISTDIR)/
 
 
@@ -414,9 +420,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_DControlBolas.cpp moc_DExamenDAM.cpp moc_DialogoGraficos.cpp moc_DialogoTabla.cpp moc_InfoDialog.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
+compiler_moc_header_make_all: moc_DControlBolas.cpp moc_DExamenDAM.cpp moc_DialogoGraficos.cpp moc_DialogoTabla.cpp moc_DTreeView.cpp moc_InfoDialog.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_DControlBolas.cpp moc_DExamenDAM.cpp moc_DialogoGraficos.cpp moc_DialogoTabla.cpp moc_InfoDialog.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
+	-$(DEL_FILE) moc_DControlBolas.cpp moc_DExamenDAM.cpp moc_DialogoGraficos.cpp moc_DialogoTabla.cpp moc_DTreeView.cpp moc_InfoDialog.cpp moc_mainwindow.cpp moc_WidgetBola.cpp
 moc_DControlBolas.cpp: DControlBolas.h \
 		ui_DControlBolas.h \
 		BolaYWidget.h \
@@ -450,6 +456,13 @@ moc_DialogoTabla.cpp: DialogoTabla.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas -I/home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCharts -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include DialogoTabla.h -o moc_DialogoTabla.cpp
+
+moc_DTreeView.cpp: DTreeView.h \
+		ui_DTreeView.h \
+		bola.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas -I/home/vesprada/AD_JAVA/repo/INTERFACES/treballarBoles/bolas -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCharts -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include DTreeView.h -o moc_DTreeView.cpp
 
 moc_InfoDialog.cpp: InfoDialog.h \
 		ui_InfoDialog.h \
@@ -553,6 +566,11 @@ DialogoTabla.o: DialogoTabla.cpp DialogoTabla.h \
 		bola.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DialogoTabla.o DialogoTabla.cpp
 
+DTreeView.o: DTreeView.cpp DTreeView.h \
+		ui_DTreeView.h \
+		bola.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o DTreeView.o DTreeView.cpp
+
 InfoDialog.o: InfoDialog.cpp InfoDialog.h \
 		ui_InfoDialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o InfoDialog.o InfoDialog.cpp
@@ -597,6 +615,9 @@ moc_DialogoGraficos.o: moc_DialogoGraficos.cpp
 
 moc_DialogoTabla.o: moc_DialogoTabla.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_DialogoTabla.o moc_DialogoTabla.cpp
+
+moc_DTreeView.o: moc_DTreeView.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_DTreeView.o moc_DTreeView.cpp
 
 moc_InfoDialog.o: moc_InfoDialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_InfoDialog.o moc_InfoDialog.cpp
