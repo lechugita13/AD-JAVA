@@ -3699,3 +3699,172 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.ui 2 2 2019-11-14 20:35:20.101
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-02-05 19:39:09.673 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-05 19:39:32.899
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2020-02-05 19:39:35.762
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-05 19:39:35.762
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11896124,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@69fe8c75,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:39:44.875
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:39:44.880
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3979c6e8[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:39:44.935
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:39:45.595
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.328
+!MESSAGE Boot LS startup time from start to initialized: 15315ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.597
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mDtisyiHisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.597
+!MESSAGE subscribing to classpath changes: sts4.classpath.mDtisyiH isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.599
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.601
+!MESSAGE subsribers = {sts4.classpath.mDtisyiH=Send Classpath Notifications(57)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.601
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.607
+!MESSAGE project PotGaletes ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.607
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.607
+!MESSAGE Preparing classpath changed notification PotGaletes
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.608
+!MESSAGE project HolaMundo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.608
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.608
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.608
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.608
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.609
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.609
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.609
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.610
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mDtisyiH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.610
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.611
+!MESSAGE buffering callback sts4.classpath.mDtisyiH PotGaletes false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.613
+!MESSAGE Preparing classpath changed notification Divisibles
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.614
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.614
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.614
+!MESSAGE buffering callback sts4.classpath.mDtisyiH Divisibles false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.614
+!MESSAGE Preparing classpath changed notification HolaMundo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.615
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.615
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.615
+!MESSAGE buffering callback sts4.classpath.mDtisyiH HolaMundo false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.615
+!MESSAGE Preparing classpath changed notification MultiplicaLlista
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.616
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.616
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE buffering callback sts4.classpath.mDtisyiH MultiplicaLlista false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE Preparing classpath changed notification OrdreExecucio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE buffering callback sts4.classpath.mDtisyiH OrdreExecucio false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.617
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.618
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.618
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.618
+!MESSAGE buffering callback sts4.classpath.mDtisyiH TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.618
+!MESSAGE executing callback sts4.classpath.mDtisyiH 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.761
+!MESSAGE executing callback sts4.classpath.mDtisyiH SUCCESS [done]
