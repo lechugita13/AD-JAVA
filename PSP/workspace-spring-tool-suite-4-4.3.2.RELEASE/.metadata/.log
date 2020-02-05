@@ -3868,3 +3868,393 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:40:00.761
 !MESSAGE executing callback sts4.classpath.mDtisyiH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.149
+!MESSAGE Preparing classpath changed notification primerapractica
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.172
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.173
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.173
+!MESSAGE buffering callback sts4.classpath.mDtisyiH primerapractica false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.173
+!MESSAGE executing callback sts4.classpath.mDtisyiH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:00.174
+!MESSAGE executing callback sts4.classpath.mDtisyiH FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-02-05 19:54:00.174
+!MESSAGE 
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.mDtisyiH'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:197)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:168)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.264
+!MESSAGE Preparing classpath changed notification primerapractica
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.265
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.266
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.266
+!MESSAGE buffering callback sts4.classpath.mDtisyiH primerapractica false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.267
+!MESSAGE executing callback sts4.classpath.mDtisyiH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:02.267
+!MESSAGE executing callback sts4.classpath.mDtisyiH FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-02-05 19:54:02.267
+!MESSAGE 
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.mDtisyiH'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:197)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:168)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:04.513
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mDtisyiH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:04.514
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mDtisyiH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:04.514
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:54:04.515
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mDtisyiH => OK
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-02-05 19:56:03.061
+!MESSAGE Plug-in org.eclipse.lsp4e was unable to load class org.eclipse.lsp4e.operations.symbols.WorkspaceSymbolsQuickAccessProvider.
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/ui/quickaccess/IQuickAccessComputerExtension
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.defineClass(ModuleClassLoader.java:278)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:716)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:330)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:396)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:474)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:415)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:155)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessExtensionManager$QuickAccessProviderExtensionProxy.canDelegate(QuickAccessExtensionManager.java:90)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessExtensionManager$QuickAccessProviderExtensionProxy.doReset(QuickAccessExtensionManager.java:146)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessProvider.reset(QuickAccessProvider.java:96)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessContents.resetProviders(QuickAccessContents.java:917)
+	at org.eclipse.ui.internal.quickaccess.SearchField$7.doClose(SearchField.java:279)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessContents$1.keyPressed(QuickAccessContents.java:689)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:171)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5874)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1400)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1426)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1409)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1450)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:819)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3978)
+	at org.eclipse.swt.widgets.Text.gtk_key_press_event(Text.java:1788)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2238)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6814)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2935)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6132)
+	at org.eclipse.swt.internal.gtk.GTK._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.GTK.gtk_main_do_event(GTK.java:4166)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1429)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1585)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.ui.quickaccess.IQuickAccessComputerExtension cannot be found by org.eclipse.lsp4e_0.11.0.201908091852
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:512)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:415)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:155)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 68 more
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-02-05 19:56:03.112
+!MESSAGE Plug-in org.eclipse.lsp4e was unable to load class org.eclipse.lsp4e.operations.symbols.WorkspaceSymbolsQuickAccessProvider.
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/ui/quickaccess/IQuickAccessComputerExtension
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.defineClass(ModuleClassLoader.java:278)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:716)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:639)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:607)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:587)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:566)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:330)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:396)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:474)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:415)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:155)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:620)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:196)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessExtensionManager$QuickAccessProviderExtensionProxy.canDelegate(QuickAccessExtensionManager.java:90)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessExtensionManager$QuickAccessProviderExtensionProxy.doReset(QuickAccessExtensionManager.java:146)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessProvider.reset(QuickAccessProvider.java:96)
+	at org.eclipse.ui.internal.quickaccess.QuickAccessContents.resetProviders(QuickAccessContents.java:917)
+	at org.eclipse.ui.internal.quickaccess.SearchField$7.doClose(SearchField.java:279)
+	at org.eclipse.ui.internal.quickaccess.SearchField.checkFocusLost(SearchField.java:573)
+	at org.eclipse.ui.internal.quickaccess.SearchField$4.lambda$0(SearchField.java:202)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5113)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:635)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1441)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.ui.quickaccess.IQuickAccessComputerExtension cannot be found by org.eclipse.lsp4e_0.11.0.201908091852
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:512)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:423)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:415)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:155)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 53 more
+
+!ENTRY org.eclipse.ui 2 2 2020-02-05 19:56:31.337
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2020-02-05 19:57:03.917 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-05 19:57:16.921
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2020-02-05 19:57:19.487
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-05 19:57:19.487
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a9e7b4d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72406594,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2020-02-05 19:58:08.958
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:38.083
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:38.084
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@19544898[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:38.092
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:38.231
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.663
+!MESSAGE Boot LS startup time from start to initialized: 5520ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.718
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wwISSEnWisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.718
+!MESSAGE subscribing to classpath changes: sts4.classpath.wwISSEnW isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.720
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.722
+!MESSAGE subsribers = {sts4.classpath.wwISSEnW=Send Classpath Notifications(95)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.722
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.725
+!MESSAGE project primerapractica ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.725
+!MESSAGE Preparing classpath changed notification primerapractica
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.726
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.729
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.730
+!MESSAGE buffering callback sts4.classpath.wwISSEnW primerapractica false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.730
+!MESSAGE executing callback sts4.classpath.wwISSEnW 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.731
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.734
+!MESSAGE project Divisibles SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.735
+!MESSAGE project HolaMundo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.736
+!MESSAGE project HolaMundo SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.741
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.744
+!MESSAGE project MultiplicaLlista SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.750
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.751
+!MESSAGE project OrdreExecucio SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.751
+!MESSAGE project PotGaletes ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.752
+!MESSAGE project PotGaletes SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.752
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.752
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.752
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.753
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.753
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wwISSEnW => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.817
+!MESSAGE executing callback sts4.classpath.wwISSEnW SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.819
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.819
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.820
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.820
+!MESSAGE buffering callback sts4.classpath.wwISSEnW TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.820
+!MESSAGE executing callback sts4.classpath.wwISSEnW 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 19:58:43.840
+!MESSAGE executing callback sts4.classpath.wwISSEnW SUCCESS [done]
+
+!ENTRY Activator 4 0 2020-02-05 20:06:48.327
+!MESSAGE CoreException: Timed out waiting for Spring Cloud CLI to be installed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Timed out waiting for Spring Cloud CLI to be installed
+	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:41)
+	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:32)
+	at org.springsource.ide.eclipse.commons.livexp.util.ExceptionUtil.coreException(ExceptionUtil.java:50)
+	at org.springframework.ide.eclipse.boot.util.Log.error(Log.java:60)
+	at org.springframework.ide.eclipse.boot.dash.model.local.AutoCloudCliInstaller.performInstall(AutoCloudCliInstaller.java:54)
+	at org.springframework.ide.eclipse.boot.dash.model.local.LocalServicesModel$1.doPerform(LocalServicesModel.java:62)
+	at org.springframework.ide.eclipse.boot.dash.model.BootDashHyperlink.perform(BootDashHyperlink.java:35)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$9$1.run(BootDashUnifiedTreeSection.java:367)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 Activator 4 0 2020-02-05 20:06:48.329
+!MESSAGE Timed out waiting for Spring Cloud CLI to be installed
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 20:28:59.666
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wwISSEnW
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 20:28:59.681
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.wwISSEnW
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 20:28:59.681
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-05 20:28:59.681
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wwISSEnW => OK
