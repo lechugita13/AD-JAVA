@@ -1,4 +1,4 @@
-package com.simarro.practica11;
+package com.itzanchan.practica11_itzanhuerta;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;

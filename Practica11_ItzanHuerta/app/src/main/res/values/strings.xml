@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Practica11_ItzanHuerta</string>
+    <string name="login">Login</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasenya">Contraseña</string>
+    <string name="cancel">Cancel</string>
+    <string name="datos_incorrectos">Datos de inicio de sesión incorrectos. El FBI esta de camino.</string>
+    <string name="bienvenido">Bienvenido, Pepe.</string>
+    <string name="opc1">Opcion 1</string>
+    <string name="opc2">Opción 2</string>
+    <string name="opc3">Opcion 3</string>
+    <string name="opc4">Cerrar sesión</string>
+    <string name="otras_opciones">Otras opciones</string>
+    <string name="gatitos">Gatitos</string>
+
+</resources>
