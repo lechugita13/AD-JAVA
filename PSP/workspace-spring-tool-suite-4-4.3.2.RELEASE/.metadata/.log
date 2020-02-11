@@ -5891,3 +5891,172 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-10 19:16:56.846
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.TJZFQsFD => OK
+!SESSION 2020-02-11 18:23:16.559 -----------------------------------------------
+eclipse.buildId=4.3.2.201908130627-RELEASE
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ca_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-11 18:23:28.668
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2020-02-11 18:23:31.513
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-11 18:23:31.514
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63af52a6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10ae002e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:23:44.888
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:23:44.889
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6f1b0ead[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=617)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:23:44.912
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:23:45.595
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.ui 2 2 2020-02-11 18:23:49.780
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:08.401
+!MESSAGE Boot LS startup time from start to initialized: 23331ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.196
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BSOGSiTiisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.196
+!MESSAGE subscribing to classpath changes: sts4.classpath.BSOGSiTi isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.198
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.200
+!MESSAGE subsribers = {sts4.classpath.BSOGSiTi=Send Classpath Notifications(87)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.201
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.208
+!MESSAGE project PracticaSpringAngular ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.208
+!MESSAGE Preparing classpath changed notification PracticaSpringAngular
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.209
+!MESSAGE project Divisibles ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.209
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.209
+!MESSAGE project Divisibles SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.209
+!MESSAGE project HolaMundo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.210
+!MESSAGE project HolaMundo SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.210
+!MESSAGE project MultiplicaLlista ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.210
+!MESSAGE project MultiplicaLlista SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.210
+!MESSAGE project OrdreExecucio ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.211
+!MESSAGE project OrdreExecucio SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.211
+!MESSAGE project PotGaletes ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.211
+!MESSAGE project PotGaletes SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.212
+!MESSAGE project ProbaFils ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.212
+!MESSAGE project ProbaFils SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.212
+!MESSAGE project TascaProgramada ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.212
+!MESSAGE project primerapractica ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.213
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.213
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BSOGSiTi => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.214
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.214
+!MESSAGE buffering callback sts4.classpath.BSOGSiTi PracticaSpringAngular false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.215
+!MESSAGE Preparing classpath changed notification TascaProgramada
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.215
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.216
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.216
+!MESSAGE buffering callback sts4.classpath.BSOGSiTi TascaProgramada false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.216
+!MESSAGE Preparing classpath changed notification primerapractica
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.216
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.218
+!MESSAGE classpath=71 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.219
+!MESSAGE buffering callback sts4.classpath.BSOGSiTi primerapractica false 71
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.219
+!MESSAGE executing callback sts4.classpath.BSOGSiTi 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:09.508
+!MESSAGE executing callback sts4.classpath.BSOGSiTi SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:24.866
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BSOGSiTi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:24.867
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.BSOGSiTi
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:24.867
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-11 18:24:24.867
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BSOGSiTi => OK
