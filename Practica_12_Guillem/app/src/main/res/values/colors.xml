@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFEB3B</color>
+    <color name="colorPrimaryDark">#000A3D</color>
+    <color name="colorAccent">#D81B1B</color>
+    <color name="colorAnyo">#0DE443</color>
+    <color name="colorTitlo">#EEE528</color>
+    <color name="colorTituloNuevoRobot">#98DD9E</color>
+    <color name="colorBorrarChill">#7AF8DE00</color>
+    <color name="colorBorrar">#BCFFB700</color>
+    <color name="colorEditarChill">#AB53CA21</color>
+    <color name="colorEditar">#2BE71E</color>
+    <color name="colorBoto">#FAE100</color>
+    <color name="colorBotoPressed">#68C0E9</color>
+</resources>

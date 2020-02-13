@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.itzanchan.practica11_itzanhuerta.R;
+import com.simarro.practica11.R;
 
 public class DialogoLogin extends DialogFragment {
 

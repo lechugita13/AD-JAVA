@@ -2,4 +2,12 @@
     <string name="app_name">Practica11</string>
     <string name="signin">Logear</string>
     <string name="cancel">Cancelar</string>
+    <string name="login">login</string>
+    <string name="usuario">usuario</string>
+    <string name="contrasenya">contrasenya</string>
+    <string name="opc1">opc1</string>
+    <string name="opc2">opc2</string>
+    <string name="opc3">opc3</string>
+    <string name="otras_opciones">otras_opciones</string>
+    <string name="opc4">opc4</string>
 </resources>

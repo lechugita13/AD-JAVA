@@ -13,11 +13,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
-import com.itzanchan.practica11_itzanhuerta.classes.User;
-import com.itzanchan.practica11_itzanhuerta.dialog.DialogoLogin;
+import com.simarro.practica11.classes.User;
+import com.simarro.practica11.dialog.DialogoLogin;
+import com.simarro.practica11.fragments.Fragment1;
+import com.simarro.practica11.fragments.Fragment2;
+import com.simarro.practica11.fragments.Fragment3;
+import com.simarro.practica11.fragments.Fragment4;
+import com.simarro.practica11.fragments.Fragment5;
 
 import java.io.InputStreamReader;
 
@@ -40,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // cojer el del navigation view el header, y de el los textviews por ID
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
         tvUsuario = headerView.findViewById(R.id.tvUsuario);
@@ -70,15 +76,9 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         }
     }
 
-    /**
-     * Muestra en el menu lateral los datos del usuario dados por parametro.
-     *
-     * @param username
-     * @param fullName
-     * @param id
-     */
+
     private void mostrarUsuario(String username, String fullName, int id) {
-        // mostrar los datos del usuario
+
         tvUsuario.setText(username);
         tvNombreCompleto.setText(fullName);
         switch (id) {
@@ -97,11 +97,6 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         }
     }
 
-    /**
-     * Muestra el mensaje de bienvenida en un dialogo modal. Usado al principio de la aplicacion.
-     *
-     * @param username
-     */
     private void mostrarAlertBienvenido(String username) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder
@@ -112,21 +107,13 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         builder.show();
     }
 
-    /**
-     * Lanza el cuandro de dialogo modal que pregunta por un usuario y contraseña.
-     */
     private void mostrarDialogoLogin() {
         DialogoLogin dialogo = new DialogoLogin(this);
         dialogo.show(getSupportFragmentManager(), null);
         dialogo.setCancelable(false);
     }
 
-    /**
-     * Lanzado por mostrarDialogoLogin al confirmar.
-     *
-     * @param user es null si el usuario cancela
-     * @param pass es null si el usuario cancela
-     */
+
     @Override
     public void onLogin(String user, String pass) {
         User u = this.checkLogin(user, pass);
@@ -139,11 +126,6 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         }
     }
 
-    /**
-     * Guarda los datos del usuario especificados a los SharedPreferences.
-     *
-     * @param u
-     */
     private void guardarLogin(User u) {
         SharedPreferences.Editor editor = getSharedPreferences(KEY_MIS_PREFERENCIAS, MODE_PRIVATE).edit();
         editor.putInt(KEY_ID, u.getId());
@@ -152,9 +134,6 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         editor.commit();
     }
 
-    /**
-     * Dialogo de error en caso de no acertar la contraseña. Vuelve a lanzar la entrada de login.
-     */
     private void mostrarDialogoError() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder
@@ -170,14 +149,6 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         builder.show();
     }
 
-    /**
-     * Comprueva los datos de un usuario en los datos estáticos del listado de usuarios.
-     *
-     * @param user nombre de usuario
-     * @param pass contraseña de usuario
-     * @return el objecto del usuario encontrado en caso que el nombre y la contraseña sean correctas,
-     * o null si no ha habido ningun registro que coincida
-     */
     private User checkLogin(String user, String pass) {
         InputStreamReader input = new InputStreamReader(getResources().openRawResource(R.raw.users));
         Gson gson = new Gson();
@@ -190,9 +161,7 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
         return null;
     }
 
-    /**
-     * Elimina los datos de usuarios guardados en las SharedPreferences
-     */
+
     private void eliminarUsuarioGuardado() {
         SharedPreferences.Editor editor = getSharedPreferences(KEY_MIS_PREFERENCIAS, MODE_PRIVATE).edit();
         editor.remove(KEY_ID);
@@ -202,16 +171,37 @@ public class MainActivity extends AppCompatActivity implements DialogoLogin.OnLo
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_subopcion_1: {
-                this.drawerLayout.closeDrawer(Gravity.LEFT);
-                this.eliminarUsuarioGuardado();
-                this.mostrarDialogoLogin();
-            }
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Fragment fragment = null;
+        switch (menuItem.getItemId()){
+            case R.id.menu_opcion_1:
+                fragment = Fragment1.newInstance();
+                break;
+            case R.id.menu_opcion_2:
+                fragment = Fragment2.newInstance();
+                break;
+            case R.id.menu_opcion_3:
+                fragment = Fragment3.newInstance();
+                break;
+            case R.id.menu_subopcion_1:
+                fragment = Fragment4.newInstance();
+                break;
+
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+
+        if (navView.getCheckedItem() != null){
+            navView.getCheckedItem().setChecked(false);
         }
 
-        return false;
+        menuItem.setChecked(true);
+
+        getSupportActionBar().setTitle(menuItem.getTitle());
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        drawerLayout.closeDrawers();
+        return true;
+
     }
 
     @Override

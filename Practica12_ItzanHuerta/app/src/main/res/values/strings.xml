@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Practica12_ItzanHuerta</string>
+    <string name="robots">Robots</string>
+    <string name="sinRobots">Todavía no existe ningún robot en el sistema.</string>
+    <string name="imagen_desc">Imagen del robot.</string>
+    <string name="nuevo_robot">Nuevo Robot</string>
+    <string name="nombre">Nombre:</string>
+    <string name="material">Material:</string>
+    <string name="anyo">Año:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="crear_robot">ACEPTAR</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="editar">EDITAR</string>
+    <string name="crear">Crear</string>
+    <string name="Reset">Reiniciar</string>
+
+</resources>
